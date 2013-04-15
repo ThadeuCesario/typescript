@@ -16,8 +16,11 @@ O que temos dentro do TypeScript
 
 Typescript é transpilado para Javascript
 
+Javascript é uma linguagem fracamente tipada.
 
+Supondo que eu não passe diretamente a tipagem para uma variável, o próprio typescript vai inferir um tipo para aquela variável, seguindo o primeiro valor atribuido para ela.
 
+O Typescript não possui uma tipagem diferente para números inteiros e números flutuantes.
 
 
 ###########################
