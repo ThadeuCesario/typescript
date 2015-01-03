@@ -31,10 +31,13 @@ Podemos com esse tipo trabalhar de uma forma muito gradativa com o TS.
 
 
 ###########################
-Comandos:
+Comandos e opções:
 
 -> Inicializar um projeto typescript
 tsc --init
 
 -> Escutar mudanças dos arquivos typescript para gerar os arquivos javascript automaticamente
 tsc -w
+
+-> Não permitir a geração do javascript quando existir algum erro no typescript
+"noEmitOnError": true
