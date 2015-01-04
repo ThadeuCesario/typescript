@@ -101,3 +101,24 @@ let notaNew = 10;
 console.log(`Minha nota é ${notaNew}`); //template string
 notaNew = '10';
 console.log(`Minha nota é ${notaNew}`); //template string
+// Tipo never
+// Utilizamos esse tipo quando a função nunca retornará algum valor (looping infinito o.O)
+// ou quando a função obrigatoriamente retorna uma erro.
+// Never não é a mesma coisa que void!!
+function falha(msg) {
+    // while(true);
+    throw new Error(msg);
+}
+const produtoTeste = {
+    nome: `Sabão`,
+    preco: 10,
+    validarProduto() {
+        if (!this.nome || this.nome.trim().length === 0) {
+            falha('Precisa ter um nome');
+        }
+        if (this.preco <= 0) {
+            falha('Preço inválido');
+        }
+    }
+};
+produtoTeste.validarProduto();
