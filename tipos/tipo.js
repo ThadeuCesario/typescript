@@ -122,3 +122,15 @@ const produtoTeste = {
     }
 };
 produtoTeste.validarProduto();
+let alturaNew = 12;
+// alturaNew = null;
+let alturaNewOpcional = 12;
+alturaNewOpcional = null;
+const contatoTest = {
+    nome: 'Thadeu',
+    tel1: '11011221122',
+    tel2: null
+};
+console.log(contatoTest.nome);
+console.log(contatoTest.tel1);
+console.log(contatoTest.tel2);
