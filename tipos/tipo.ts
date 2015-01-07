@@ -164,3 +164,27 @@ const produtoTeste = {
 }
 
 produtoTeste.validarProduto();
+
+
+let alturaNew = 12;
+// alturaNew = null;
+
+let alturaNewOpcional: null | number = 12;
+alturaNewOpcional = null;
+
+
+type ContatoNew = {
+    nome: string,
+    tel1: string,
+    tel2: string | null, // aqui poderiamos tambem fazer dessa forma =>> tel2?: string
+}
+
+const contatoTest: ContatoNew = {
+    nome: 'Thadeu',
+    tel1: '11011221122',
+    tel2: null
+}
+
+console.log(contatoTest.nome);
+console.log(contatoTest.tel1);
+console.log(contatoTest.tel2);
