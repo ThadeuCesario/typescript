@@ -134,3 +134,16 @@ const contatoTest = {
 console.log(contatoTest.nome);
 console.log(contatoTest.tel1);
 console.log(contatoTest.tel2);
+let contaBancarianNew = {
+    saldo: 3456,
+    depositar(valor) {
+        this.saldo += valor;
+    }
+};
+let correntistaNew = {
+    nome: 'Ana Silva',
+    contaBancaria: contaBancarianNew,
+    contatos: ['34567890', '98765432']
+};
+correntistaNew.contaBancaria.depositar(3000);
+console.log(correntistaNew);
