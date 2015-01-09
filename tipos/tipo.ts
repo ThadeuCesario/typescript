@@ -188,3 +188,33 @@ const contatoTest: ContatoNew = {
 console.log(contatoTest.nome);
 console.log(contatoTest.tel1);
 console.log(contatoTest.tel2);
+
+//------------ Desafio ------------------
+
+
+type ContaBancariaProps = {
+    saldo: number,
+    depositar: (valor: number) => void,
+}
+
+type CorrentistaProps = {
+    nome: string;
+    contaBancaria: ContaBancariaProps,
+    contatos: string[],
+}
+
+let contaBancarianNew: ContaBancariaProps = {
+    saldo: 3456,
+    depositar(valor: number): void {
+        this.saldo += valor
+    }
+}
+ 
+let correntistaNew: CorrentistaProps = {
+    nome: 'Ana Silva',
+    contaBancaria: contaBancarianNew,
+    contatos: ['34567890', '98765432']
+}
+ 
+correntistaNew.contaBancaria.depositar(3000)
+console.log(correntistaNew)
