@@ -35,3 +35,8 @@ console.log(typeof myHobbies);
 myHobbies = [10, 20, 30]; //como é um array de any
 // myHobbies = 'string';
 console.log(myHobbies);
+
+
+let numberType: number = 123;
+// numberType = 'teste';
+console.log()
