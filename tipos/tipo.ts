@@ -39,4 +39,11 @@ console.log(myHobbies);
 
 let numberType: number = 123;
 // numberType = 'teste';
-console.log()
+console.log(numberType);
+
+//Tuplas
+let endereco: [string, number] = ["Av Principal", 99];
+console.log(endereco);
+
+// Enum (estrutura que definimos valores pré-definidos)
+

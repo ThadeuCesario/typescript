@@ -30,4 +30,8 @@ myHobbies = [10, 20, 30]; //como é um array de any
 console.log(myHobbies);
 let numberType = 123;
 // numberType = 'teste';
-console.log();
+console.log(numberType);
+//Tuplas
+let endereco = ["Av Principal", 99];
+console.log(endereco);
+// Enum (estrutura que definimos valores pré-definidos)
