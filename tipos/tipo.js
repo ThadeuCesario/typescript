@@ -35,3 +35,13 @@ console.log(numberType);
 let endereco = ["Av Principal", 99];
 console.log(endereco);
 // Enum (estrutura que definimos valores pré-definidos)
+var Cor;
+(function (Cor) {
+    Cor[Cor["Cinza"] = 0] = "Cinza";
+    Cor[Cor["Verde"] = 100] = "Verde";
+    Cor[Cor["Azul"] = 101] = "Azul"; // 2
+})(Cor || (Cor = {}));
+let minhaCor = Cor.Verde;
+console.log("minhaCor", minhaCor);
+let minhaCor2 = Cor.Azul;
+console.log("minhaCor2", minhaCor2);
