@@ -46,4 +46,15 @@ let endereco: [string, number] = ["Av Principal", 99];
 console.log(endereco);
 
 // Enum (estrutura que definimos valores pré-definidos)
+enum Cor {
+    Cinza, // 0
+    Verde = 100, // 1
+    Azul // 2
+}
+
+let minhaCor: Cor = Cor.Verde;
+console.log("minhaCor", minhaCor);
+
+let minhaCor2: Cor = Cor.Azul;
+console.log("minhaCor2", minhaCor2);
 
