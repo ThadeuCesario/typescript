@@ -22,9 +22,14 @@ Supondo que eu não passe diretamente a tipagem para uma variável, o próprio t
 
 O Typescript não possui uma tipagem diferente para números inteiros e números flutuantes.
 
+Uma
+
 
 ###########################
 Comandos:
 
 -> Inicializar um projeto typescript
 tsc --init
+
+-> Escutar mudanças dos arquivos typescript para gerar os arquivos javascript automaticamente
+tsc -w
