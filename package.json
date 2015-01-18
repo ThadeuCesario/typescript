@@ -1,7 +1,7 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "description": "<!-- TO DO: ajustar escrita do readme  -->",
+  "description": "Studies about Typescript - Cod3r",
   "main": "index.html",
   "dependencies": {
     "live-server": "^1.2.1"
