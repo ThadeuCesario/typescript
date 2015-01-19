@@ -45,3 +45,9 @@ let minhaCor = Cor.Verde;
 console.log("minhaCor", minhaCor);
 let minhaCor2 = Cor.Azul;
 console.log("minhaCor2", minhaCor2);
+let carro = 'BMW';
+console.log(carro);
+carro = {
+    marca: 'BMW',
+    ano: 2019
+};
