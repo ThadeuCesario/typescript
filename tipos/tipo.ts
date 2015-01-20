@@ -58,3 +58,10 @@ console.log("minhaCor", minhaCor);
 let minhaCor2: Cor = Cor.Azul;
 console.log("minhaCor2", minhaCor2);
 
+
+let carro: any = 'BMW';
+console.log(carro);
+carro = {
+    marca: 'BMW',
+    ano: 2019
+}
