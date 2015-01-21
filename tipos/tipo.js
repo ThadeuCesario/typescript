@@ -51,3 +51,21 @@ carro = {
     marca: 'BMW',
     ano: 2019
 };
+// Funções
+// Ao lado da função podemos colocar o tipo de retorno que esperamos dela
+function retornaMeuNome() {
+    // return minhaIdade;
+    return nome;
+}
+console.log('function retornaMeuNome', retornaMeuNome());
+// Quando temos uma função que não retorna nada, podemos utilizar o tipo void ;) 
+function digaOi() {
+    console.log('oi');
+    // return 'oi';
+}
+digaOi();
+function multiplicar(numA, numB) {
+    return numA * numB;
+}
+// console.log(multiplicar('ola', 2)); // somente podemos passar number e number como parametros da função
+console.log(multiplicar(2, 2));
