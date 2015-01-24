@@ -90,3 +90,20 @@ function multiplicar(numA: number, numB: number): number {
 
 // console.log(multiplicar('ola', 2)); // somente podemos passar number e number como parametros da função
 console.log(multiplicar(2,2));
+
+
+// Tipo função
+let calculo: (a: number, b: number) => number;
+calculo = multiplicar;
+console.log(calculo(5, 5));
+
+
+//Objetos
+let usuarios: {nome: string, idade: number} = {
+    nome: 'João',
+    idade: 27,
+}
+console.log(usuarios);
+
+// usuarios = {}
+
