@@ -107,3 +107,18 @@ console.log(usuarios);
 
 // usuarios = {}
 
+// Desafio Cod3r
+
+const baterPonto = (hora: number): string => hora <= 8 ? 'Ponto normal' : 'Fora do horário'
+
+let funcionarioDesafio: {
+    supervisores: string[],
+    baterPonto: (hora: number) => string,
+} = {
+    supervisores: ['Allan', 'Emerson', 'Zizu'],
+    baterPonto
+}
+
+console.log(funcionarioDesafio.supervisores);
+console.log(funcionarioDesafio.baterPonto(7));
+console.log(funcionarioDesafio.baterPonto(10));
