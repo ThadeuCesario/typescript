@@ -89,3 +89,10 @@ let funcionarioDesafio = {
 console.log(funcionarioDesafio.supervisores);
 console.log(funcionarioDesafio.baterPonto(7));
 console.log(funcionarioDesafio.baterPonto(10));
+let funcionarioDesafio2 = {
+    supervisores: ['Bruna', 'Maria'],
+    baterPonto
+};
+console.log(funcionarioDesafio2.supervisores);
+console.log(funcionarioDesafio2.baterPonto(7));
+console.log(funcionarioDesafio2.baterPonto(10));
