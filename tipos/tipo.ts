@@ -111,10 +111,12 @@ console.log(usuarios);
 
 const baterPonto = (hora: number): string => hora <= 8 ? 'Ponto normal' : 'Fora do horário'
 
-let funcionarioDesafio: {
+type FuncionarioProps = {
     supervisores: string[],
     baterPonto: (hora: number) => string,
-} = {
+}
+
+let funcionarioDesafio: FuncionarioProps = {
     supervisores: ['Allan', 'Emerson', 'Zizu'],
     baterPonto
 }
@@ -122,3 +124,12 @@ let funcionarioDesafio: {
 console.log(funcionarioDesafio.supervisores);
 console.log(funcionarioDesafio.baterPonto(7));
 console.log(funcionarioDesafio.baterPonto(10));
+
+let funcionarioDesafio2: FuncionarioProps = {
+    supervisores: ['Bruna', 'Maria'],
+    baterPonto
+}
+
+console.log(funcionarioDesafio2.supervisores);
+console.log(funcionarioDesafio2.baterPonto(7));
+console.log(funcionarioDesafio2.baterPonto(10));
