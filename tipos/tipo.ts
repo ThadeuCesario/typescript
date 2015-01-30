@@ -133,3 +133,9 @@ let funcionarioDesafio2: FuncionarioProps = {
 console.log(funcionarioDesafio2.supervisores);
 console.log(funcionarioDesafio2.baterPonto(7));
 console.log(funcionarioDesafio2.baterPonto(10));
+
+// Union Types
+let notaNew: number | string = 10;
+console.log(`Minha nota é ${notaNew}`); //template string
+notaNew = '10';
+console.log(`Minha nota é ${notaNew}`); //template string
