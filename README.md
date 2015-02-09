@@ -41,3 +41,7 @@ tsc -w
 
 -> Não permitir a geração do javascript quando existir algum erro no typescript
 "noEmitOnError": true
+
+-> Propriedade target, informa qual a versão do Javascript que o Typescript será transpilado
+
+-> SourceMap: Com esse arquivo podemos ter um mapeamento entre o arquivo que está sendo executado no browser e código original.
