@@ -147,3 +147,4 @@ let correntistaNew = {
 };
 correntistaNew.contaBancaria.depositar(3000);
 console.log(correntistaNew);
+//# sourceMappingURL=tipo.js.map
