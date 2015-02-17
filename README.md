@@ -45,3 +45,5 @@ tsc -w
 -> Propriedade target, informa qual a versão do Javascript que o Typescript será transpilado
 
 -> SourceMap: Com esse arquivo podemos ter um mapeamento entre o arquivo que está sendo executado no browser e código original.
+
+-> noImplicitAny: Não é permitido o valor any
