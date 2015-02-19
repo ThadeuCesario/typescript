@@ -47,3 +47,20 @@ tsc -w
 -> SourceMap: Com esse arquivo podemos ter um mapeamento entre o arquivo que está sendo executado no browser e código original.
 
 -> noImplicitAny: Não é permitido o valor any
+
+-> strictNullChecks: Serve para verificarmos se está retornando nulo
+
+-> noUnusedParameters: Verificação de parâmetros não utilizados
+
+-> noUnusedLocals: Valida variáveis locais que não estão sendo utilizadas
+
+-> outDir: Aqui podemos definir onde ficarão os arquivos Javascript gerados pelo Typescript
+
+-> outFile: Podemos gerar um único arquivo Javascript com todos os arquivos gerados pelo Typescript
+Uma observação importante é que essa opção não é compatível com o commonJS, então precisamos mudar nas configurações para system.
+
+Links Úteis
+
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+https://www.typescriptlang.org/docs/handbook/compiler-options.html
