@@ -1,0 +1,25 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "<!-- TO DO: ajustar escrita do readme  -->",
+  "main": "index.html",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "live-server",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/ThadeuCesario/typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThadeuCesario/typescript/issues"
+  },
+  "homepage": "https://github.com/ThadeuCesario/typescript#readme"
+}

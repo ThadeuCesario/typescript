@@ -189,4 +189,3 @@ fetch('https://swapi.dev/api/people/1')
   .then(respFilm => respFilm.json())
   .then(filme => console.log(filme.title))
   */ 
-//# sourceMappingURL=ecmascript.js.map

@@ -63,11 +63,6 @@ console.log(address);
  * com os 'Enums'
  */
 var Colors;
-/**
- * Enum
- * São estruturas que contém valores pré-definidos. Então por exemplo os dias da semana, ou até mesmo os meses do ano, são bons exemplos que podemos tratar
- * com os 'Enums'
- */
 (function (Colors) {
     Colors[Colors["Red"] = 100] = "Red";
     Colors[Colors["Green"] = 101] = "Green";
@@ -274,4 +269,3 @@ let correntista = {
 };
 correntista.contaBancaria.depositar(10000);
 console.log(correntista);
-//# sourceMappingURL=types.js.map

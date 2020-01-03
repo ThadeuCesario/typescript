@@ -52,4 +52,3 @@ function saudar(isManha) {
     }
     return saudacao;
 }
-//# sourceMappingURL=compiler.js.map
