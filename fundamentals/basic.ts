@@ -1,2 +1,2 @@
-const a:string = 'Hello Typescript: ts-node';
+const a:string = 'Hello Typescript(WEB): ts-node';
 console.log(a);
