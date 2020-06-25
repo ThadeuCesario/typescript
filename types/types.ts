@@ -90,3 +90,19 @@ let car: any = 'BMW';
 console.log(car);
 car = {model: 'BMW', year: 2019};
 console.log(car);
+
+
+
+/**
+ * Funções
+ * No javascript sabemos que pela tipagem dinâmica, o retorno seria normal. 
+ * Mas e se quisermos dizer que essa função deve retornar uma string? 
+ * Para isso, basta fazer:
+ * function returnMyName(): string{}
+ * Veja que coloquei o ': string'
+ */
+function returnMyName(): string{
+  return userName;
+}
+
+console.log(returnMyName());

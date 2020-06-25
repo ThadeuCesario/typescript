@@ -70,8 +70,6 @@ var Colors;
 })(Colors || (Colors = {}));
 var myColor = Colors.Blue; // No caso como é o azul, o retorno é 2
 console.log(myColor); // 2
-
-
 /**
  * Tipo Any
  * Basicamente com ela podemos definir qualquer valor para a variável.
@@ -83,14 +81,15 @@ var car = 'BMW';
 console.log(car);
 car = { model: 'BMW', year: 2019 };
 console.log(car);
-
 /**
  * Funções
- * 
- * 
+ * No javascript sabemos que pela tipagem dinâmica, o retorno seria normal.
+ * Mas e se quisermos dizer que essa função deve retornar uma string?
+ * Para isso, basta fazer:
+ * function returnMyName(): string{}
+ * Veja que coloquei o ': string'
  */
-function returnMyName(){
+function returnMyName() {
     return userName;
 }
-
 console.log(returnMyName());
