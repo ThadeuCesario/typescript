@@ -70,6 +70,8 @@ var Colors;
 })(Colors || (Colors = {}));
 var myColor = Colors.Blue; // No caso como é o azul, o retorno é 2
 console.log(myColor); // 2
+
+
 /**
  * Tipo Any
  * Basicamente com ela podemos definir qualquer valor para a variável.
@@ -81,3 +83,14 @@ var car = 'BMW';
 console.log(car);
 car = { model: 'BMW', year: 2019 };
 console.log(car);
+
+/**
+ * Funções
+ * 
+ * 
+ */
+function returnMyName(){
+    return userName;
+}
+
+console.log(returnMyName());
