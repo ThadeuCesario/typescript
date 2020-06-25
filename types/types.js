@@ -50,7 +50,7 @@ console.log(hobbies);
  *
  * let address: [string, number] = ['Avenidade Teste', 123];
  *
- * Veja que basicamente estamos declarando que remos um array, com o primeiro elemento sendo uma string e o segundo elemento sendo um number.
+ * Veja que basicamente estamos declarando que temos um array, com o primeiro elemento sendo uma string e o segundo elemento sendo um number.
  *
  * Se eu tentar adicionar um terceiro elemento, o typescript apontará um erro. Ou até mesmo se eu tentar invertar as posições, também gerará um problema.
  * Para não dar erro, precisamos de um array com duas posições, sendo a primeira uma string e a segunda um number.
@@ -113,3 +113,19 @@ function calc(numA, numB) {
     return numA * numB;
 }
 console.log(calc(10, 10));
+/**
+ * Em javascript, podemos criar uma função e atribuir sua função em uma variável.
+ * Pois em typescript podemos tipar uma variável, deixando explícito que aquela variável receberá uma função.
+ * Para isso, é bem semelhante quando criamos um arrow function. Além disso, precisamos informar quais são os
+ * parâmetros e qual será o tipo de retorno.
+ * Veja o caso abaixo:
+ * let callHello: (numeroA: number, numeroB: number) => number;
+ * Tenho uma variável que receberá uma função, essa função terá dois parãmetros que são do tipo number. Além disso, o retorno dessa função,
+ * também será do tipo number.
+ *
+ * Veja que no exemplo abaixo passei a função 'calc', essa função segue o mesmo modelo de tipagem que a variável 'callHello'.
+ * Portanto, consegui atribuir e função 'calc' dentro da variável 'callHello';
+ */
+var callHello;
+callHello = calc;
+console.log(callHello(5, 5));
