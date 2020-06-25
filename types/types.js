@@ -61,8 +61,6 @@ console.log(address);
  * Enum
  * São estruturas que contém valores pré-definidos. Então por exemplo os dias da semana, ou até mesmo os meses do ano, são bons exemplos que podemos tratar
  * com os 'Enums'
- *
- *
  */
 var Colors;
 (function (Colors) {
@@ -72,3 +70,14 @@ var Colors;
 })(Colors || (Colors = {}));
 var myColor = Colors.Blue; // No caso como é o azul, o retorno é 2
 console.log(myColor); // 2
+/**
+ * Tipo Any
+ * Basicamente com ela podemos definir qualquer valor para a variável.
+ * Então veja no exemplo abaixo que tenho uma variável chamada 'car' do tipo any.
+ * Iniciei essa varias com uma string e logo em seguida mudei para object.
+ * Como o tipo é any, não teve problema nenhum.
+ */
+var car = 'BMW';
+console.log(car);
+car = { model: 'BMW', year: 2019 };
+console.log(car);
