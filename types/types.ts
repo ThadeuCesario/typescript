@@ -72,9 +72,9 @@ console.log(address);
  * 
  */
 enum Colors{
-    Red,    // 0
+    Red = 100,    // 0 (Apesar de possuir esses valores fixos, podemos definir nossos proproios valores. Por exemplo Red = 100. Então passará a ser o valor 100), todos os elementos seguintes serão afetados.
     Green,  // 1
-    Blue,   // 2
+    Blue,   // 2  -> nesse caso será 102, porque definimos o Red como 100. Podemos até referenciar valores duplicados, por exemplo colocar o Blue = 100.
 }
 
 let myColor: Colors = Colors.Blue; // No caso como é o azul, o retorno é 2
