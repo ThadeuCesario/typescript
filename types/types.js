@@ -63,4 +63,12 @@ console.log(address);
  * com os 'Enums'
  *
  *
- */ 
+ */
+var Colors;
+(function (Colors) {
+    Colors[Colors["Red"] = 0] = "Red";
+    Colors[Colors["Green"] = 1] = "Green";
+    Colors[Colors["Blue"] = 2] = "Blue";
+})(Colors || (Colors = {}));
+var myColor = Colors.Blue; // No caso como é o azul, o retorno é 2
+console.log(myColor); // 2

@@ -71,3 +71,11 @@ console.log(address);
  * 
  * 
  */
+enum Colors{
+    Red,    // 0
+    Green,  // 1
+    Blue,   // 2
+}
+
+let myColor: Colors = Colors.Blue; // No caso como é o azul, o retorno é 2
+console.log(myColor); // 2
