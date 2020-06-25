@@ -106,3 +106,16 @@ function returnMyName(): string{
 }
 
 console.log(returnMyName());
+
+/**
+ * Funções void (Não retorna nada)
+ * 
+ * Nesses casos, basta utilizar o tipo void. 
+ * function Hello(): void{}, o tipo void deixa explícito que essa função não retorna absolutamente nada.
+ */
+
+function Hello(): void{
+  console.log('Hello Typescript');
+}
+
+Hello();
