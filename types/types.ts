@@ -63,3 +63,11 @@ console.log(hobbies);
  */
 let address: [string, number] = ['Avenidade Teste', 123];
 console.log(address);
+
+/**
+ * Enum
+ * São estruturas que contém valores pré-definidos. Então por exemplo os dias da semana, ou até mesmo os meses do ano, são bons exemplos que podemos tratar
+ * com os 'Enums'
+ * 
+ * 
+ */
