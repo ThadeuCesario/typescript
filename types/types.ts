@@ -119,3 +119,15 @@ function Hello(): void{
 }
 
 Hello();
+
+/**
+ * Aplicando tipos nos parâmetros da função.
+ * function calc(numA:number, numB:number): number{}
+ * Veja que o primeiro parametro que definimos que é do tipo number, o numB que também definimos que é do tipo number.
+ * Além disso, essa função retorna um number.
+ */
+function calc(numA:number, numB:number): number{
+  return numA *numB;
+}
+
+console.log(calc(10, 10));
