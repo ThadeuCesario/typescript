@@ -1,16 +1,16 @@
 //String
-let userName = 'Thadeu';
+let userName:string = 'Thadeu';
 console.log(userName);
 //userName = 28;
 
 //numbers
-let userAge = 27;
+let userAge:number = 27;
 //userAge = 'Ana';
 userAge = 27.5; //O javascript e typescript não difere numero inteiro de numero flutuante.
 console.log(userAge);
 
 //boolean
-let hasHobbies = false;
+let hasHobbies:boolean = false;
 //hasHobbies = 1;
 console.log(hasHobbies);
 
