@@ -50,5 +50,16 @@ console.log(hobbies);
  * Basicamente definimos um array que podemos declarar seus tipos de forma ordenada. Então por exemplo: "Quero um array que o primeiro elemento seja um string,
  * o segundo um number e o terceiro um number";
  * Podemos fazer isso, utilizando tuplas.
+ * Veja o caso abaixo que tenho um array de endereço. Veja que nesse caso, sempre será o endereço e o número do endereço. 
+ * Portanto sempre será string e number. 
+ * Logo, podemos tratar como sendo uma tupla. Para isso, basta seguir o esquema abaixo: 
  * 
+ * let address: [string, number] = ['Avenidade Teste', 123];
+ * 
+ * Veja que basicamente estamos declarando que remos um array, com o primeiro elemento sendo uma string e o segundo elemento sendo um number. 
+ * 
+ * Se eu tentar adicionar um terceiro elemento, o typescript apontará um erro. Ou até mesmo se eu tentar invertar as posições, também gerará um problema.
+ * Para não dar erro, precisamos de um array com duas posições, sendo a primeira uma string e a segunda um number.
  */
+let address: [string, number] = ['Avenidade Teste', 123];
+console.log(address);
