@@ -145,7 +145,7 @@ console.log(calc(10, 10));
  * Veja que no exemplo abaixo passei a função 'calc', essa função segue o mesmo modelo de tipagem que a variável 'callHello'.
  * Portanto, consegui atribuir e função 'calc' dentro da variável 'callHello'; 
  */
-let callHello: (numeroA: number, numeroB: number) => number;
+let callHello: (numberA: number, numberB: number) => number;
 
 callHello = calc;
 console.log(callHello(5,5));
