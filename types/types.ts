@@ -213,7 +213,6 @@ let funcionarios: {
     }
   }
 }
-
 console.log(funcionarios.nomesSupervisores);
 console.log(funcionarios.baterPonto(8));
 console.log(funcionarios.baterPonto(10));
