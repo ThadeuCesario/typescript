@@ -162,17 +162,7 @@ user = {
     name: 'Karina',
 };
 console.log(user);
-/*************************/
-/**
- * Desafio:
- * Criar um objeto funcionário, com:
- * - Array de strings com os nomes do supervisores
- * - Função de bater ponto que receve a hora (número) e retorna uma string
- *  -> Ponto normal (<=8)
- *  -> Fora do horário (>8)
- */
-/*************************/
-var funcionarios = {
+var funcionario = {
     nomesSupervisores: ['Thadeu', 'Davi', 'Eliel', 'Júnior'],
     baterPonto: function (pontoSupervisor) {
         if (pontoSupervisor <= 8) {
@@ -183,6 +173,25 @@ var funcionarios = {
         }
     }
 };
-console.log(funcionarios.nomesSupervisores);
-console.log(funcionarios.baterPonto(8));
-console.log(funcionarios.baterPonto(10));
+console.log(funcionario.nomesSupervisores);
+console.log(funcionario.baterPonto(8));
+console.log(funcionario.baterPonto(10));
+var funcionario2 = {
+    nomesSupervisores: ['Liliane', 'Filipe', 'Mateus', 'Robson'],
+    baterPonto: function (pontoSupervisor) {
+        if (pontoSupervisor <= 8) {
+            return 'Ponto Normal';
+        }
+        else {
+            return 'Fora do Horário';
+        }
+    }
+};
+/**
+ * Union Types
+ * Veja uma aplicação de union types, no exemplo abaixo estou apontando que minha nota poderá ser do tipo 'number' ou do tipoe 'string'.
+ */
+var nota = 10;
+console.log("Minha nota \u00E9 " + nota + "!");
+nota = '10';
+console.log("Minha nota \u00E9 " + nota + "!");

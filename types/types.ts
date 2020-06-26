@@ -196,13 +196,17 @@ console.log(user);
  * - Função de bater ponto que receve a hora (número) e retorna uma string
  *  -> Ponto normal (<=8)
  *  -> Fora do horário (>8) 
+ * 
+ * Crie a modelagem de forma que possa ser reaproveitada. Para isso utilize o 'type' 
  */
 /*************************/
 
-let funcionarios: {
+type Funcionario = {
   nomesSupervisores: string[],
   baterPonto: (ponto: number) => string,
-} = {
+}
+
+let funcionario: Funcionario = {
   nomesSupervisores: ['Thadeu', 'Davi', 'Eliel', 'Júnior'],
   baterPonto(pontoSupervisor: number): string{
     if(pontoSupervisor <= 8){
@@ -213,6 +217,28 @@ let funcionarios: {
     }
   }
 }
-console.log(funcionarios.nomesSupervisores);
-console.log(funcionarios.baterPonto(8));
-console.log(funcionarios.baterPonto(10));
+console.log(funcionario.nomesSupervisores);
+console.log(funcionario.baterPonto(8));
+console.log(funcionario.baterPonto(10));
+
+
+let funcionario2: Funcionario = {
+  nomesSupervisores: ['Liliane', 'Filipe', 'Mateus', 'Robson'],
+  baterPonto(pontoSupervisor: number): string{
+    if(pontoSupervisor <= 8){
+      return 'Ponto Normal';
+    }
+    else{
+      return 'Fora do Horário';
+    }
+  }
+}
+
+/**
+ * Union Types
+ * Veja uma aplicação de union types, no exemplo abaixo estou apontando que minha nota poderá ser do tipo 'number' ou do tipoe 'string'.
+ */
+let nota: number | string = 10;
+console.log(`Minha nota é ${nota}!`);
+nota = '10';
+console.log(`Minha nota é ${nota}!`);
