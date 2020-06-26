@@ -244,8 +244,8 @@ nota = '10';
 console.log(`Minha nota é ${nota}!`);
 
 /**
- * Checagem de tipos de forma manual
- * 
+ * Checagem de tipos de forma manual (lembrando os tempos do javascript)
+ * Typescript é basicamente colocar o Javascript dentro de um tanque de guerra =D. 
  */
 let value = 30;
 

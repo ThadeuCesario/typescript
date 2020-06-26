@@ -196,8 +196,8 @@ console.log("Minha nota \u00E9 " + nota + "!");
 nota = '10';
 console.log("Minha nota \u00E9 " + nota + "!");
 /**
- * Checagem de tipos de forma manual
- *
+ * Checagem de tipos de forma manual (lembrando os tempos do javascript)
+ * Typescript é basicamente colocar o Javascript dentro de um tanque de guerra =D.
  */
 var value = 30;
 if (typeof value === 'number') {
