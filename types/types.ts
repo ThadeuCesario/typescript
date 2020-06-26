@@ -242,3 +242,16 @@ let nota: number | string = 10;
 console.log(`Minha nota é ${nota}!`);
 nota = '10';
 console.log(`Minha nota é ${nota}!`);
+
+/**
+ * Checagem de tipos de forma manual
+ * 
+ */
+let value = 30;
+
+if(typeof value === 'number'){
+  console.log('é um valor number');
+}
+else{
+  console.log(typeof value);
+}

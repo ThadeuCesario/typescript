@@ -195,3 +195,14 @@ var nota = 10;
 console.log("Minha nota \u00E9 " + nota + "!");
 nota = '10';
 console.log("Minha nota \u00E9 " + nota + "!");
+/**
+ * Checagem de tipos de forma manual
+ *
+ */
+var value = 30;
+if (typeof value === 'number') {
+    console.log('é um valor number');
+}
+else {
+    console.log(typeof value);
+}
