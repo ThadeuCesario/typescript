@@ -172,14 +172,17 @@ console.log(user);
  *  -> Fora do horário (>8)
  */
 /*************************/
-var funcionario = {
-    names: ['Thadeu', 'Karina', 'Katharina'],
-    calcPoint: function (point) {
-        if (point <= 8)
+var funcionarios = {
+    nomesSupervisores: ['Thadeu', 'Davi', 'Eliel', 'Júnior'],
+    baterPonto: function (pontoSupervisor) {
+        if (pontoSupervisor <= 8) {
             return 'Ponto Normal';
-        else
-            return 'Fora do horário';
+        }
+        else {
+            return 'Fora do Horário';
+        }
     }
 };
-console.log(funcionario.names);
-console.log(funcionario.calcPoint(8));
+console.log(funcionarios.nomesSupervisores);
+console.log(funcionarios.baterPonto(8));
+console.log(funcionarios.baterPonto(10));

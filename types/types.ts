@@ -199,16 +199,21 @@ console.log(user);
  */
 /*************************/
 
-let funcionario: {
-  names: string[],
-  calcPoint: (point: number) => string;
+let funcionarios: {
+  nomesSupervisores: string[],
+  baterPonto: (ponto: number) => string,
 } = {
-  names: ['Thadeu', 'Karina', 'Katharina'],
-  calcPoint(point: number): string {
-    if(point <= 8) return 'Ponto Normal';
-    else return 'Fora do horário';
+  nomesSupervisores: ['Thadeu', 'Davi', 'Eliel', 'Júnior'],
+  baterPonto(pontoSupervisor: number): string{
+    if(pontoSupervisor <= 8){
+      return 'Ponto Normal';
+    }
+    else{
+      return 'Fora do Horário';
+    }
   }
 }
 
-console.log(funcionario.names);
-console.log(funcionario.calcPoint(8));
+console.log(funcionarios.nomesSupervisores);
+console.log(funcionarios.baterPonto(8));
+console.log(funcionarios.baterPonto(10));
