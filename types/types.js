@@ -129,3 +129,57 @@ console.log(calc(10, 10));
 var callHello;
 callHello = calc;
 console.log(callHello(5, 5));
+/**
+ * Podemos definir variáveis do tipo Object.
+ * Quando criamos um objeto igual no caso abaixo o typescript já se responsabilizará por duas coisas:
+ * 1) Temos um objeto
+ * 2) Esse objeto possui um determinado conjunto de parametros
+ * Um detalhe é que a ordem não importa. Logo é diferente se compararmos com uma função, em que a ordem dos parâmetros é importante. Mesmo porque objeto
+ * não tem essa obrigatoriedade de sequencia de atributos.
+ *
+ * Podemos deixar mais explicito os atributos dentro de nosso objeto:
+ *
+ * {name: string, age: number}
+ *
+ * Mas se eu quiser remover, também não tem problema. Pois será inferido pelo próprio Typescript.
+ */
+var user = {
+    name: 'Thadeu',
+    age: 27
+};
+console.log(user);
+//user = {} //Isso retornará um erro, lembrando que não apenas os tipos das propriedades serão verificados mas também os atributos passados são inferidos.
+/*
+O caso abaixo também gera um erro, porque PRECISAMOS respeitar o 'name' e o 'age'.
+
+user = {
+  nome: 'Thadeu',
+  idade: 27
+}
+*/
+user = {
+    age: 28,
+    name: 'Karina',
+};
+console.log(user);
+/*************************/
+/**
+ * Desafio:
+ * Criar um objeto funcionário, com:
+ * - Array de strings com os nomes do supervisores
+ * - Função de bater ponto que receve a hora (número) e retorna uma string
+ *  -> Ponto normal (<=8)
+ *  -> Fora do horário (>8)
+ */
+/*************************/
+var funcionario = {
+    names: ['Thadeu', 'Karina', 'Katharina'],
+    calcPoint: function (point) {
+        if (point <= 8)
+            return 'Ponto Normal';
+        else
+            return 'Fora do horário';
+    }
+};
+console.log(funcionario.names);
+console.log(funcionario.calcPoint(8));
