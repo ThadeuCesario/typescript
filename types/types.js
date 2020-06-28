@@ -256,9 +256,6 @@ var contato1 = {
 console.log(contato1.nome);
 console.log(contato1.tel1);
 console.log(contato1.tel2);
-/**
- * Desafio
- */
 var contaBancaria = {
     saldo: 3456,
     depositar: function (valor) {
@@ -270,5 +267,5 @@ var correntista = {
     contaBancaria: contaBancaria,
     contatos: ['34567890', '98765432']
 };
-correntista.contaBancaria.depositar(3000);
+correntista.contaBancaria.depositar(10000);
 console.log(correntista);
