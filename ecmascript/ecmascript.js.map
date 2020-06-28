@@ -1,1 +1,1 @@
-{"version":3,"file":"ecmascript.js","sourceRoot":"","sources":["ecmascript.ts"],"names":[],"mappings":";AAAA,MAAM"}
+{"version":3,"file":"ecmascript.js","sourceRoot":"","sources":["ecmascript.ts"],"names":[],"mappings":";AAAA;;;;;;;GAOG;AACH,IAAI,wBAAwB,GAAG,GAAG,CAAC;AACnC,OAAO,CAAC,GAAG,CAAC,wBAAwB,CAAC,CAAC;AAEtC,IAAI,QAAQ,GAAG,IAAI,CAAC;AACpB,IAAG,QAAQ,EAAC;IACV,IAAI,IAAI,GAAG,kBAAkB,CAAC;IAC9B,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC;CACnB;AAED,MAAM,GAAG,GAAW,gBAAgB,CAAA;AACpC,yBAAyB;AACzB,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC"}

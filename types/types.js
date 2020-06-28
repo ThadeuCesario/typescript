@@ -1,15 +1,15 @@
 "use strict";
 //String
-var userName = 'Thadeu';
+let userName = 'Thadeu';
 console.log(userName);
 //userName = 28;
 //numbers
-var userAge = 27;
+let userAge = 27;
 //userAge = 'Ana';
 userAge = 27.5; //O javascript e typescript não difere numero inteiro de numero flutuante.
 console.log(userAge);
 //boolean
-var hasHobbies = false;
+let hasHobbies = false;
 //hasHobbies = 1;
 console.log(hasHobbies);
 /**
@@ -19,7 +19,7 @@ console.log(hasHobbies);
  * No typescript é conhecido como 'any', porém abordaremos mais tarde. Que é basicamente um tipo que pode ter, número, string
  * objeto, array...
  */
-var myAge;
+let myAge;
 myAge = 27;
 console.log(typeof myAge); //number
 myAge = 'idade é 27';
@@ -34,7 +34,7 @@ console.log(typeof myAge); //string
  *
  * Veja que temos um 'any[]', significa que estamos trabalhando com um array que suporta qualquer tipo de elementos.
  */
-var hobbies = ['Estudar javascript', 'Cubo Mágico', 'Fazer sudoku', 'Ver vídeos'];
+let hobbies = ['Estudar javascript', 'Cubo Mágico', 'Fazer sudoku', 'Ver vídeos'];
 console.log(hobbies);
 console.log(typeof hobbies); // retorna um Object
 hobbies = [100];
@@ -55,7 +55,7 @@ console.log(hobbies);
  * Se eu tentar adicionar um terceiro elemento, o typescript apontará um erro. Ou até mesmo se eu tentar invertar as posições, também gerará um problema.
  * Para não dar erro, precisamos de um array com duas posições, sendo a primeira uma string e a segunda um number.
  */
-var address = ['Avenidade Teste', 123];
+let address = ['Avenidade Teste', 123];
 console.log(address);
 /**
  * Enum
@@ -63,12 +63,17 @@ console.log(address);
  * com os 'Enums'
  */
 var Colors;
+/**
+ * Enum
+ * São estruturas que contém valores pré-definidos. Então por exemplo os dias da semana, ou até mesmo os meses do ano, são bons exemplos que podemos tratar
+ * com os 'Enums'
+ */
 (function (Colors) {
     Colors[Colors["Red"] = 100] = "Red";
     Colors[Colors["Green"] = 101] = "Green";
     Colors[Colors["Blue"] = 102] = "Blue";
 })(Colors || (Colors = {}));
-var myColor = Colors.Blue; // No caso como é o azul, o retorno é 2
+let myColor = Colors.Blue; // No caso como é o azul, o retorno é 2
 console.log(myColor); // 2
 /**
  * Tipo Any
@@ -77,7 +82,7 @@ console.log(myColor); // 2
  * Iniciei essa varias com uma string e logo em seguida mudei para object.
  * Como o tipo é any, não teve problema nenhum.
  */
-var car = 'BMW';
+let car = 'BMW';
 console.log(car);
 car = { model: 'BMW', year: 2019 };
 console.log(car);
@@ -126,7 +131,7 @@ console.log(calc(10, 10));
  * Veja que no exemplo abaixo passei a função 'calc', essa função segue o mesmo modelo de tipagem que a variável 'callHello'.
  * Portanto, consegui atribuir e função 'calc' dentro da variável 'callHello';
  */
-var callHello;
+let callHello;
 callHello = calc;
 console.log(callHello(5, 5));
 /**
@@ -143,7 +148,7 @@ console.log(callHello(5, 5));
  *
  * Mas se eu quiser remover, também não tem problema. Pois será inferido pelo próprio Typescript.
  */
-var user = {
+let user = {
     name: 'Thadeu',
     age: 27
 };
@@ -162,9 +167,9 @@ user = {
     name: 'Karina',
 };
 console.log(user);
-var funcionario = {
+let funcionario = {
     nomesSupervisores: ['Thadeu', 'Davi', 'Eliel', 'Júnior'],
-    baterPonto: function (pontoSupervisor) {
+    baterPonto(pontoSupervisor) {
         if (pontoSupervisor <= 8) {
             return 'Ponto Normal';
         }
@@ -176,9 +181,9 @@ var funcionario = {
 console.log(funcionario.nomesSupervisores);
 console.log(funcionario.baterPonto(8));
 console.log(funcionario.baterPonto(10));
-var funcionario2 = {
+let funcionario2 = {
     nomesSupervisores: ['Liliane', 'Filipe', 'Mateus', 'Robson'],
-    baterPonto: function (pontoSupervisor) {
+    baterPonto(pontoSupervisor) {
         if (pontoSupervisor <= 8) {
             return 'Ponto Normal';
         }
@@ -191,15 +196,15 @@ var funcionario2 = {
  * Union Types
  * Veja uma aplicação de union types, no exemplo abaixo estou apontando que minha nota poderá ser do tipo 'number' ou do tipoe 'string'.
  */
-var nota = 10;
-console.log("Minha nota \u00E9 " + nota + "!");
+let nota = 10;
+console.log(`Minha nota é ${nota}!`);
 nota = '10';
-console.log("Minha nota \u00E9 " + nota + "!");
+console.log(`Minha nota é ${nota}!`);
 /**
  * Checagem de tipos de forma manual (lembrando os tempos do javascript)
  * Typescript é basicamente colocar o Javascript dentro de um tanque de guerra =D.
  */
-var value = 30;
+let value = 30;
 if (typeof value === 'number') {
     console.log('é um valor number');
 }
@@ -221,10 +226,10 @@ function fail(message) {
      */
     throw new Error(message);
 }
-var produto = {
+const produto = {
     nome: 'Sabão',
     preco: 10,
-    validarProduto: function () {
+    validarProduto() {
         if (!this.nome || this.nome.trim().length === 0) {
             fail('Precisa ter um nome');
         }
@@ -244,11 +249,11 @@ produto.validarProduto();
  * Sempre que inicializamos umas variável com o valor 'null' é passado como padão o tipo
  * any.
  */
-var altura = 12;
+let altura = 12;
 //altura = null;
-var alturaOpcional = 12;
+let alturaOpcional = 12;
 alturaOpcional = null;
-var contato1 = {
+const contato1 = {
     nome: 'Thadeu',
     tel1: '11966469263',
     tel2: null
@@ -256,13 +261,13 @@ var contato1 = {
 console.log(contato1.nome);
 console.log(contato1.tel1);
 console.log(contato1.tel2);
-var contaBancaria = {
+let contaBancaria = {
     saldo: 3456,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     }
 };
-var correntista = {
+let correntista = {
     nome: 'Ana Silva',
     contaBancaria: contaBancaria,
     contatos: ['34567890', '98765432']
