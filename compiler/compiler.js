@@ -24,6 +24,10 @@
  *
  * "noImplicitAny": true,
  * Com essa flag configuramos para que não tenha nenhum tipo de reclamação, quando uma variável for implicitamente associada ao 'any'.
+ *
+ * "strictNullChecks": true
+ * Será verificado eventuais nulos que possam ser retornados. Portanto quando setemos essa flag como false, não será mais realizado
+ * validação caso a função retorne null.
  */
 var canal = 'Gaveta';
 var inscritos = 6210234;
@@ -35,4 +39,14 @@ function soma(a, b) {
 var qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
+function saudar(isManha) {
+    var saudacao;
+    if (isManha) {
+        saudacao = 'Bom dia';
+    }
+    else {
+        saudacao = 'Vida longa ao TS';
+    }
+    return saudacao;
+}
 //# sourceMappingURL=compiler.js.map

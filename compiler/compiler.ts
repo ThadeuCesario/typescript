@@ -23,6 +23,10 @@
    * 
    * "noImplicitAny": true,  
    * Com essa flag configuramos para que não tenha nenhum tipo de reclamação, quando uma variável for implicitamente associada ao 'any'.
+   * 
+   * "strictNullChecks": true
+   * Será verificado eventuais nulos que possam ser retornados. Portanto quando setemos essa flag como false, não será mais realizado
+   * validação caso a função retorne null. 
    */
 
    let canal: string = 'Gaveta';
@@ -38,3 +42,17 @@
   let qualquerCoisa;
   qualquerCoisa = 12;
   qualquerCoisa = 'abc';
+
+
+  function saudar(isManha: boolean): string{
+    let saudacao: string;
+
+    if(isManha){
+      saudacao = 'Bom dia';
+    }
+    else{
+      saudacao = 'Vida longa ao TS';
+    }
+    
+    return saudacao;
+  }
