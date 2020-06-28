@@ -42,8 +42,7 @@ function soma(a, b) {
 var qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
-function saudar(isManha, horas) {
-    var a = 1;
+function saudar(isManha) {
     var saudacao;
     if (isManha) {
         saudacao = 'Bom dia';

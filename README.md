@@ -1,2 +1,1 @@
-Os tipos são inferidos apartir do momento da inicialização.
-<br/>
+<h1>TYPESCRIPT</h1>
