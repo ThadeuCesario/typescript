@@ -82,6 +82,10 @@ contagemRegressiva(5); //Valor parametro 5
  * Operador Rest e Spread
  * Spread -> espalhar
  * Rest -> Agrupar
+ *
+ * Devemos lembrar que podemos utilizar parametros antes, quando estamos utilizando o rest e o
+ * spread. Porém, não devemos colocar parâmetros depois de um rest, pois poderá ocasionar problema
+ * de compilação.
  */
 var numbers = [1, 90, 99, -5, 230];
 console.log("O maior n\u00FAmero \u00E9 " + Math.max.apply(Math, numbers));
@@ -91,4 +95,13 @@ var turmaC = __spreadArrays(turmaA, turmaB);
 console.log("turmaA: " + turmaA);
 console.log("turmaB: " + turmaB);
 console.log("turmaC: " + turmaC);
+function retornarArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return __spreadArrays(args);
+}
+var numeros = retornarArray(1, 2);
+console.log(numeros);
 //# sourceMappingURL=ecmascript.js.map
