@@ -70,3 +70,15 @@ normalComThisEspecial();
 
 const arrowComThis = () => console.log(this);
 arrowComThis();
+
+function contagemRegressiva(inicio: number = 3): void{
+  console.log(inicio);
+  while(inicio > 0){
+    inicio--;
+    console.log(inicio);
+  }
+  console.log("Fim");
+}
+
+contagemRegressiva(); //Valor padrão 3
+contagemRegressiva(5); //Valor parametro 5

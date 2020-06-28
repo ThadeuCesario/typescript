@@ -60,4 +60,15 @@ var normalComThisEspecial = normalComThis.bind({ nome: 'Ana' });
 normalComThisEspecial();
 var arrowComThis = function () { return console.log(_this); };
 arrowComThis();
+function contagemRegressiva(inicio) {
+    if (inicio === void 0) { inicio = 3; }
+    console.log(inicio);
+    while (inicio > 0) {
+        inicio--;
+        console.log(inicio);
+    }
+    console.log("Fim");
+}
+contagemRegressiva(); //Valor padrão 3
+contagemRegressiva(5); //Valor parametro 5
 //# sourceMappingURL=ecmascript.js.map
