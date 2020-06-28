@@ -336,7 +336,6 @@ type CorrentistaType = {
   contaBancaria: ContaBancariaType;
   contatos: string[];
 }
-
 let contaBancaria: ContaBancariaType   = {
   saldo: 3456,
   depositar(valor) {

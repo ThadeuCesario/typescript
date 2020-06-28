@@ -12,6 +12,14 @@
    * Target
    * Essa configuração define, qual será a versão do javascript que será utilizada no arquivo compilado. Por padrão o target vemm configurado no ES5.
    * 
+   * sourceMap
+   * "sourceMap": true
+   * 
+   * Quando habilitarmos o console de desenvolvedor, com essa configuração poderemos ter acesso, ao código original que gerou aquele javascript
+   * que está sendo interpretado pela página. 
+   * Portanto o sourceMap te dará um mapeamento do arquivo que está sendo interpretado no browser, do arquivo que foi utilizado para realmente realizar aquele código.
+   * Lembrando que quando um código passa para a web geralmente é muito tratado para que fique o menor possível. 
+   * Portanto o sourceMap realizará um mapeamento das linhas que estão sendo interpretada pelo browser, da linha que está no arquivo original.
    */
 
    let canal: string = 'Gaveta';
