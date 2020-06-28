@@ -234,3 +234,15 @@ var produto = {
     }
 };
 produto.validarProduto();
+/**
+ * Atribuindo null para uma variável.
+ * Por padrão o typescript não nos permite atribuit um tipo null em variáveis.
+ * Vemos o caso abaixo que temos uma variável altura que teve o seu tipo inferido (number).
+ * Em seguida, tentei atribuir o null e é gerado um retorno.
+ * Podemos desabilitar a flag strictNullChecks no arquivo do 'tsconfig'.
+ * ou podemos utilizar o union type.
+ */
+var altura = 12;
+//altura = null;
+var alturaOpcional = 12;
+alturaOpcional = null;
