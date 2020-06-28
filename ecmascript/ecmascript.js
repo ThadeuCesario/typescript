@@ -29,4 +29,14 @@ console.log(segredo);
     console.log(escopoBloco);
 }
 //console.log(escopoBloco);
+/**
+ * Arrow Function
+ *
+ */
+var somar = function (n1, n2) {
+    return n1 + n2;
+};
+console.log(somar(2, 2));
+var subtrair = function (n1, n2) { return n1 - n2; };
+console.log(subtrair(2, 3));
 //# sourceMappingURL=ecmascript.js.map
