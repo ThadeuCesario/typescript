@@ -35,7 +35,15 @@ console.log(segredo);
 
 /**
  * Arrow Function
+ * Para as arrow functions no typescript somos obrigado a colocar os parenteses, não importando se temos somente um parâmetro. Isso porque, 
+ * precisamos tipar o parâmetro e também o retorno da função. 
  * 
+ * O contexto do this varia. 
+ * Veja no exemplo abaixo inclusive que utilizamos o bind para fazer uma nova referencia para o valor do this. 
+ * Mas esse comportamento muda quando utilizamos uma arrow function, pois o this estará sempre referenciando o contexto léxico da função.
+ * Ou seja, o this de uma arrow function sempre aponta para o lugar no qual a função foi criada.
+ * 
+ * Portanto o this é uma diferença que precisamos entender, entre uma função comum do javascript e uma função arrow.
  */
 
 const somar = function(n1: number, n2: number): number{
@@ -45,3 +53,20 @@ console.log(somar(2,2));
 
 const subtrair = (n1: number, n2: number): number => n1 - n2;
 console.log(subtrair(2,3));
+
+const saudacao = (): void => console.log('olá');
+saudacao();
+
+const falarCom = (pessoa: string): void => console.log(`Olá ${pessoa}`);
+falarCom('Thadeu Munhóz Cesário');
+
+function normalComThis(){
+  console.log(this);
+}
+normalComThis();
+
+const normalComThisEspecial = normalComThis.bind({nome: 'Ana'});
+normalComThisEspecial();
+
+const arrowComThis = () => console.log(this);
+arrowComThis();
