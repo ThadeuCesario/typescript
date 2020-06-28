@@ -18,3 +18,17 @@ if(estaFrio){
 const cpf: string = '123.456.789-99'
 //cpf = '147.258.369-99';
 console.log(cpf);
+
+var segredo = 'externo!';
+function revelar(){
+  var segredo = 'interno';
+  console.log(segredo);
+}
+revelar();
+console.log(segredo);
+
+{
+  let escopoBloco = true;
+  console.log(escopoBloco);
+}
+//console.log(escopoBloco);
