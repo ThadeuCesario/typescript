@@ -28,6 +28,9 @@
  * "strictNullChecks": true
  * Será verificado eventuais nulos que possam ser retornados. Portanto quando setemos essa flag como false, não será mais realizado
  * validação caso a função retorne null.
+ *
+ * "noUnusedLocals": true,
+ * Validação de variáveis locais não sendo utilizadas
  */
 var canal = 'Gaveta';
 var inscritos = 6210234;
@@ -39,7 +42,8 @@ function soma(a, b) {
 var qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
-function saudar(isManha) {
+function saudar(isManha, horas) {
+    var a = 1;
     var saudacao;
     if (isManha) {
         saudacao = 'Bom dia';

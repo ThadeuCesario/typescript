@@ -27,6 +27,9 @@
    * "strictNullChecks": true
    * Será verificado eventuais nulos que possam ser retornados. Portanto quando setemos essa flag como false, não será mais realizado
    * validação caso a função retorne null. 
+   * 
+   * "noUnusedLocals": true,
+   * Validação de variáveis locais não sendo utilizadas
    */
 
    let canal: string = 'Gaveta';
@@ -44,7 +47,8 @@
   qualquerCoisa = 'abc';
 
 
-  function saudar(isManha: boolean): string{
+  function saudar(isManha: boolean, horas: number): string{
+    let a = 1;
     let saudacao: string;
 
     if(isManha){
