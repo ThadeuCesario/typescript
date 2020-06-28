@@ -21,9 +21,18 @@
  * Portanto o sourceMap te dará um mapeamento do arquivo que está sendo interpretado no browser, do arquivo que foi utilizado para realmente realizar aquele código.
  * Lembrando que quando um código passa para a web geralmente é muito tratado para que fique o menor possível.
  * Portanto o sourceMap realizará um mapeamento das linhas que estão sendo interpretada pelo browser, da linha que está no arquivo original.
+ *
+ * "noImplicitAny": true,
+ * Com essa flag configuramos para que não tenha nenhum tipo de reclamação, quando uma variável for implicitamente associada ao 'any'.
  */
 var canal = 'Gaveta';
 var inscritos = 6210234;
 //canal = inscritos;
 console.log("Canal = " + canal);
+function soma(a, b) {
+    return a + b;
+}
+var qualquerCoisa;
+qualquerCoisa = 12;
+qualquerCoisa = 'abc';
 //# sourceMappingURL=compiler.js.map
