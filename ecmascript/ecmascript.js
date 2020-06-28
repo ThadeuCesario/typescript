@@ -1,4 +1,11 @@
 "use strict";
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 var _this = this;
 /**
  * var, let e const
@@ -71,4 +78,17 @@ function contagemRegressiva(inicio) {
 }
 contagemRegressiva(); //Valor padrão 3
 contagemRegressiva(5); //Valor parametro 5
+/**
+ * Operador Rest e Spread
+ * Spread -> espalhar
+ * Rest -> Agrupar
+ */
+var numbers = [1, 90, 99, -5, 230];
+console.log("O maior n\u00FAmero \u00E9 " + Math.max.apply(Math, numbers));
+var turmaA = ['Thadeu', 'Karina', 'Katharina'];
+var turmaB = ['Thiago', 'Kelly', 'Clara'];
+var turmaC = __spreadArrays(turmaA, turmaB);
+console.log("turmaA: " + turmaA);
+console.log("turmaB: " + turmaB);
+console.log("turmaC: " + turmaC);
 //# sourceMappingURL=ecmascript.js.map

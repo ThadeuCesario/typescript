@@ -82,3 +82,18 @@ function contagemRegressiva(inicio: number = 3): void{
 
 contagemRegressiva(); //Valor padrão 3
 contagemRegressiva(5); //Valor parametro 5
+
+/**
+ * Operador Rest e Spread
+ * Spread -> espalhar
+ * Rest -> Agrupar
+ */
+const numbers = [1, 90, 99, -5, 230];
+console.log(`O maior número é ${Math.max(...numbers)}`);
+
+const turmaA: string[] = ['Thadeu', 'Karina', 'Katharina'];
+const turmaB: string[] = ['Thiago', 'Kelly', 'Clara'];
+const turmaC: string[] = [...turmaA, ...turmaB];
+console.log(`turmaA: ${turmaA}`);
+console.log(`turmaB: ${turmaB}`);
+console.log(`turmaC: ${turmaC}`);
