@@ -255,3 +255,21 @@ if(typeof value === 'number'){
 else{
   console.log(typeof value);
 }
+
+/**
+ * Tipo 'never'.
+ * Quer especificar que a função ou termina com erro ou ficará em algum tipo de loop.
+ * Portanto nunca retornará nada. 
+ * Mas veja o tipo never é diferente do tipo void.
+ * Então ela não terá um fluxo natural do restante das funções. Ela não será inicializada
+ * e depois finalizará normalmente. Essa função 
+ * 
+ */
+
+function fail(message: string): never{
+  /**
+   * Precisamos ter um laço infinito ou então mesmo um erro.
+   */
+
+   throw new Error(message);
+}
