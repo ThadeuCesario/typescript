@@ -32,18 +32,18 @@
  * "noUnusedLocals": true,
  * Validação de variáveis locais não sendo utilizadas
  */
-let canal = 'Gaveta';
-let inscritos = 6210234;
+var canal = 'Gaveta';
+var inscritos = 6210234;
 //canal = inscritos;
-console.log(`Canal = ${canal}`);
+console.log("Canal = " + canal);
 function soma(a, b) {
     return a + b;
 }
-let qualquerCoisa;
+var qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
 function saudar(isManha) {
-    let saudacao;
+    var saudacao;
     if (isManha) {
         saudacao = 'Bom dia';
     }

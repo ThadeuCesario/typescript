@@ -7,14 +7,14 @@
  * -> Let possui três tipos de escopo, de bloco, função e global.
  * -> Const possui três tipos de escopo, de bloco, função e global.
  */
-let verificandoComportamento = '?';
+var verificandoComportamento = '?';
 console.log(verificandoComportamento);
-let estaFrio = true;
+var estaFrio = true;
 if (estaFrio) {
-    let acao = 'Colocar o casaco';
+    var acao = 'Colocar o casaco';
     console.log(acao);
 }
-const cpf = '123.456.789-99';
+var cpf = '123.456.789-99';
 //cpf = '147.258.369-99';
 console.log(cpf);
 var segredo = 'externo!';
@@ -25,7 +25,7 @@ function revelar() {
 revelar();
 console.log(segredo);
 {
-    let escopoBloco = true;
+    var escopoBloco = true;
     console.log(escopoBloco);
 }
 //console.log(escopoBloco);
