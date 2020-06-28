@@ -241,6 +241,8 @@ produto.validarProduto();
  * Em seguida, tentei atribuir o null e é gerado um retorno.
  * Podemos desabilitar a flag strictNullChecks no arquivo do 'tsconfig'.
  * ou podemos utilizar o union type.
+ * Sempre que inicializamos umas variável com o valor 'null' é passado como padão o tipo
+ * any.
  */
 var altura = 12;
 //altura = null;
