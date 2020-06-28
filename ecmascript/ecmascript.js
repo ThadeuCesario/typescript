@@ -119,4 +119,13 @@ function tuplaParam2() {
     console.log("2) " + params[0] + " " + params[1] + " " + params[2]);
 }
 tuplaParam2.apply(void 0, tupla);
+/**
+ * Destructuring Array
+ *
+ */
+var web = ['Javascript', 'CSS3', 'HTML5', 'React', 'Amgular'];
+//const linguagem = web[0];
+//const estilo = web[1];
+var linguagem = web[0], estilo = web[1];
+console.log(linguagem, estilo);
 //# sourceMappingURL=ecmascript.js.map

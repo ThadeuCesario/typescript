@@ -125,3 +125,14 @@ function tuplaParam2(...params: [number, string, boolean]){
 }
 
 tuplaParam2(...tupla);
+
+/**
+ * Destructuring Array
+ * 
+ */
+const web = ['Javascript', 'CSS3', 'HTML5', 'React', 'Amgular'];
+//const linguagem = web[0];
+//const estilo = web[1];
+
+const [linguagem, estilo] = web;
+console.log(linguagem, estilo);
