@@ -273,3 +273,18 @@ function fail(message: string): never{
 
    throw new Error(message);
 }
+
+const produto = {
+  nome: 'Sabão',
+  preco: -1,
+  validarProduto(){
+    if(!this.nome || this.nome.trim().length === 0){
+      fail('Precisa ter um nome');
+    }
+    if(this.preco <= 0){
+      fail('Preço inválido');
+    }
+  }
+}
+
+produto.validarProduto();

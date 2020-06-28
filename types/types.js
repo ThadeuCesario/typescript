@@ -221,3 +221,16 @@ function fail(message) {
      */
     throw new Error(message);
 }
+var produto = {
+    nome: 'Sabão',
+    preco: -1,
+    validarProduto: function () {
+        if (!this.nome || this.nome.trim().length === 0) {
+            fail('Precisa ter um nome');
+        }
+        if (this.preco <= 0) {
+            fail('Preço inválido');
+        }
+    }
+};
+produto.validarProduto();
