@@ -223,7 +223,7 @@ function fail(message) {
 }
 var produto = {
     nome: 'Sabão',
-    preco: -1,
+    preco: 10,
     validarProduto: function () {
         if (!this.nome || this.nome.trim().length === 0) {
             fail('Precisa ter um nome');
@@ -246,3 +246,11 @@ var altura = 12;
 //altura = null;
 var alturaOpcional = 12;
 alturaOpcional = null;
+var contato1 = {
+    nome: 'Thadeu',
+    tel1: '11966469263',
+    tel2: null
+};
+console.log(contato1.nome);
+console.log(contato1.tel1);
+console.log(contato1.tel2);
