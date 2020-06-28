@@ -128,4 +128,18 @@ var web = ['Javascript', 'CSS3', 'HTML5', 'React', 'Amgular'];
 //const estilo = web[1];
 var linguagem = web[0], estilo = web[1];
 console.log(linguagem, estilo);
+var _a = [2, 3], w = _a[0], z = _a[1];
+var usuario = {
+    nome: 'Thadeu Munhóz Cesário',
+    idade: 23,
+    profissao: {
+        desenvolvedor: true,
+    }
+};
+var nomeUsuario = usuario.nome;
+var idadeUsuario = usuario.idade;
+var nomeUser = usuario.nome, idadeUser = usuario.idade, desenvolvedor = usuario.profissao.desenvolvedor;
+console.log(nomeUser, idadeUser);
+console.log(nomeUsuario, idadeUsuario);
+console.log(desenvolvedor);
 //# sourceMappingURL=ecmascript.js.map

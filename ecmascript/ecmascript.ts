@@ -136,3 +136,20 @@ const web = ['Javascript', 'CSS3', 'HTML5', 'React', 'Amgular'];
 
 const [linguagem, estilo] = web;
 console.log(linguagem, estilo);
+
+const [w, z] = [2 ,3];
+
+const usuario = {
+  nome: 'Thadeu Munhóz Cesário',
+  idade: 23,
+  profissao: {
+    desenvolvedor: true,
+  }
+}
+
+const nomeUsuario = usuario.nome;
+const idadeUsuario = usuario.idade;
+const {nome: nomeUser, idade: idadeUser, profissao: { desenvolvedor }} = usuario;
+console.log(nomeUser, idadeUser);
+console.log(nomeUsuario, idadeUsuario);
+console.log(desenvolvedor);
