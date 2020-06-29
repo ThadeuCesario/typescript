@@ -1,11 +1,4 @@
 "use strict";
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
 /**
  * var, let e const
  *
@@ -14,14 +7,14 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
  * -> Let possui três tipos de escopo, de bloco, função e global.
  * -> Const possui três tipos de escopo, de bloco, função e global.
  */
-var verificandoComportamento = '?';
+let verificandoComportamento = '?';
 console.log(verificandoComportamento);
-var estaFrio = true;
+let estaFrio = true;
 if (estaFrio) {
-    var acao = 'Colocar o casaco';
+    let acao = 'Colocar o casaco';
     console.log(acao);
 }
-var cpf = '123.456.789-99';
+const cpf = '123.456.789-99';
 //cpf = '147.258.369-99';
 console.log(cpf);
 var segredo = 'externo!';
@@ -32,7 +25,7 @@ function revelar() {
 revelar();
 console.log(segredo);
 {
-    var escopoBloco = true;
+    let escopoBloco = true;
     console.log(escopoBloco);
 }
 //console.log(escopoBloco);
@@ -48,15 +41,15 @@ console.log(segredo);
  *
  * Portanto o this é uma diferença que precisamos entender, entre uma função comum do javascript e uma função arrow.
  */
-var somar = function (n1, n2) {
+const somar = function (n1, n2) {
     return n1 + n2;
 };
 console.log(somar(2, 2));
-var subtrair = function (n1, n2) { return n1 - n2; };
+const subtrair = (n1, n2) => n1 - n2;
 console.log(subtrair(2, 3));
-var saudacao = function () { return console.log('olá'); };
+const saudacao = () => console.log('olá');
 saudacao();
-var falarCom = function (pessoa) { return console.log("Ol\u00E1 " + pessoa); };
+const falarCom = (pessoa) => console.log(`Olá ${pessoa}`);
 falarCom('Thadeu Munhóz Cesário');
 /*
 function normalComThis(){
@@ -70,8 +63,7 @@ normalComThisEspecial();
 const arrowComThis = () => console.log(this);
 arrowComThis();
 */
-function contagemRegressiva(inicio) {
-    if (inicio === void 0) { inicio = 3; }
+function contagemRegressiva(inicio = 3) {
     console.log(inicio);
     while (inicio > 0) {
         inicio--;
@@ -90,58 +82,50 @@ contagemRegressiva(5); //Valor parametro 5
  * spread. Porém, não devemos colocar parâmetros depois de um rest, pois poderá ocasionar problema
  * de compilação.
  */
-var numbers = [1, 90, 99, -5, 230];
-console.log("O maior n\u00FAmero \u00E9 " + Math.max.apply(Math, numbers));
-var turmaA = ['Thadeu', 'Karina', 'Katharina'];
-var turmaB = ['Thiago', 'Kelly', 'Clara'];
-var turmaC = __spreadArrays(turmaA, turmaB);
-console.log("turmaA: " + turmaA);
-console.log("turmaB: " + turmaB);
-console.log("turmaC: " + turmaC);
-function retornarArray() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    return __spreadArrays(args);
+const numbers = [1, 90, 99, -5, 230];
+console.log(`O maior número é ${Math.max(...numbers)}`);
+const turmaA = ['Thadeu', 'Karina', 'Katharina'];
+const turmaB = ['Thiago', 'Kelly', 'Clara'];
+const turmaC = [...turmaA, ...turmaB];
+console.log(`turmaA: ${turmaA}`);
+console.log(`turmaB: ${turmaB}`);
+console.log(`turmaC: ${turmaC}`);
+function retornarArray(...args) {
+    return [...args];
 }
-var numeros = retornarArray(1, 2);
+const numeros = retornarArray(1, 2);
 console.log(numeros);
 //Rest e spread - tupla
-var tupla = [1, 'abc', false];
+const tupla = [1, 'abc', false];
 function tuplaParam1(a, b, c) {
-    console.log("1) " + a + " " + b + " " + c);
+    console.log(`1) ${a} ${b} ${c}`);
 }
-tuplaParam1.apply(void 0, tupla);
-function tuplaParam2() {
-    var params = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        params[_i] = arguments[_i];
-    }
+tuplaParam1(...tupla);
+function tuplaParam2(...params) {
     console.log(Array.isArray(params));
-    console.log("2) " + params[0] + " " + params[1] + " " + params[2]);
+    console.log(`2) ${params[0]} ${params[1]} ${params[2]}`);
 }
-tuplaParam2.apply(void 0, tupla);
+tuplaParam2(...tupla);
 /**
  * Destructuring Array
  *
  */
-var web = ['Javascript', 'CSS3', 'HTML5', 'React', 'Amgular'];
+const web = ['Javascript', 'CSS3', 'HTML5', 'React', 'Amgular'];
 //const linguagem = web[0];
 //const estilo = web[1];
-var linguagem = web[0], estilo = web[1];
+const [linguagem, estilo] = web;
 console.log(linguagem, estilo);
-var _a = [2, 3], w = _a[0], z = _a[1];
-var usuario = {
+const [w, z] = [2, 3];
+const usuario = {
     nome: 'Thadeu Munhóz Cesário',
     idade: 23,
     profissao: {
         desenvolvedor: true,
     }
 };
-var nomeUsuario = usuario.nome;
-var idadeUsuario = usuario.idade;
-var nomeUser = usuario.nome, idadeUser = usuario.idade, desenvolvedor = usuario.profissao.desenvolvedor;
+const nomeUsuario = usuario.nome;
+const idadeUsuario = usuario.idade;
+const { nome: nomeUser, idade: idadeUser, profissao: { desenvolvedor } } = usuario;
 console.log(nomeUser, idadeUser);
 console.log(nomeUsuario, idadeUsuario);
 console.log(desenvolvedor);
@@ -149,40 +133,54 @@ console.log(desenvolvedor);
  * Desafio
  */
 // Exercicio 1
-var dobro = function (valor) { return valor * 2; };
+const dobro = (valor) => valor * 2;
 console.log(dobro(10));
 // Exercicio 2
-var dizerOla = function (nome) {
-    if (nome === void 0) { nome = 'Galera'; }
+const dizerOla = (nome = 'Galera') => {
     console.log("Ola, " + nome);
 };
 dizerOla();
 dizerOla("Anna");
 // Exercicio 3
-var nums = [-3, 33, 38, 5];
-console.log(Math.min.apply(Math, nums));
+const nums = [-3, 33, 38, 5];
+console.log(Math.min(...nums));
 // Exercicio 4
-var array = [55, 20];
-array.push.apply(array, nums);
+const array = [55, 20];
+array.push(...nums);
 console.log(array);
 // Exercicio 5
-var notas = [8.5, 6.3, 9.4];
-var notas1 = notas[0], notas2 = notas[1], notas3 = notas[2];
+const notas = [8.5, 6.3, 9.4];
+const [notas1, notas2, notas3] = notas;
 console.log(notas1, notas2, notas3);
 // Exercicio 6
-var cientista = { primeiroNome: "Will", experiencia: 12 };
-var primeiroNome = cientista.primeiroNome, experiencia = cientista.experiencia;
+const cientista = { primeiroNome: "Will", experiencia: 12 };
+const { primeiroNome, experiencia } = cientista;
 console.log(primeiroNome, experiencia);
 /**
  * Assincronismo em javascript
  * Geralmente utilizamos callbacks
  */
 function esperar3s(callback) {
-    setTimeout(function () {
+    setTimeout(() => {
         callback('3s depois...');
     }, 3000);
 }
 esperar3s(function (resultado) {
     console.log(resultado);
 });
+function esperar3sPromise() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('3s depois.promisse..');
+        }, 3000);
+    });
+}
+esperar3sPromise()
+    .then(dado => console.log(dado));
+fetch('https://swapi.dev/api/people/1')
+    .then(resp => resp.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(respFilm => respFilm.json())
+    .then(filme => console.log(filme.title));
 //# sourceMappingURL=ecmascript.js.map

@@ -205,3 +205,21 @@ console.log(primeiroNome, experiencia);
 esperar3s(function(resultado: string){
   console.log(resultado);
 })
+
+function esperar3sPromise(){
+  return new Promise((resolve: any) => {
+    setTimeout(() => {
+      resolve('3s depois.promisse..');
+    }, 3000)
+  })
+}
+
+esperar3sPromise()
+  .then(dado => console.log(dado));
+
+fetch('https://swapi.dev/api/people/1')
+  .then(resp => resp.json())
+  .then(personagem => personagem.films)
+  .then(films => fetch(films[0]))
+  .then(respFilm => respFilm.json())
+  .then(filme => console.log(filme.title))
