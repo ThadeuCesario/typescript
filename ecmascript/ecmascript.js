@@ -160,27 +160,33 @@ console.log(primeiroNome, experiencia);
  * Assincronismo em javascript
  * Geralmente utilizamos callbacks
  */
-function esperar3s(callback) {
+/*
+ function esperar3s(callback: (dado: string) => void){
+   setTimeout(() => {
+     callback('3s depois...');
+   }, 3000)
+ }
+
+esperar3s(function(resultado: string){
+  console.log(resultado);
+})
+
+function esperar3sPromise(){
+  return new Promise((resolve: any) => {
     setTimeout(() => {
-        callback('3s depois...');
-    }, 3000);
+      resolve('3s depois.promisse..');
+    }, 3000)
+  })
 }
-esperar3s(function (resultado) {
-    console.log(resultado);
-});
-function esperar3sPromise() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve('3s depois.promisse..');
-        }, 3000);
-    });
-}
+
 esperar3sPromise()
-    .then(dado => console.log(dado));
+  .then(dado => console.log(dado));
+
 fetch('https://swapi.dev/api/people/1')
-    .then(resp => resp.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(respFilm => respFilm.json())
-    .then(filme => console.log(filme.title));
+  .then(resp => resp.json())
+  .then(personagem => personagem.films)
+  .then(films => fetch(films[0]))
+  .then(respFilm => respFilm.json())
+  .then(filme => console.log(filme.title))
+  */ 
 //# sourceMappingURL=ecmascript.js.map

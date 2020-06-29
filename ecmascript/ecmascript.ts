@@ -195,7 +195,7 @@ console.log(primeiroNome, experiencia);
  * Assincronismo em javascript
  * Geralmente utilizamos callbacks
  */
-
+/*
  function esperar3s(callback: (dado: string) => void){
    setTimeout(() => {
      callback('3s depois...');
@@ -223,3 +223,4 @@ fetch('https://swapi.dev/api/people/1')
   .then(films => fetch(films[0]))
   .then(respFilm => respFilm.json())
   .then(filme => console.log(filme.title))
+  */
