@@ -173,4 +173,16 @@ console.log(notas1, notas2, notas3);
 var cientista = { primeiroNome: "Will", experiencia: 12 };
 var primeiroNome = cientista.primeiroNome, experiencia = cientista.experiencia;
 console.log(primeiroNome, experiencia);
+/**
+ * Assincronismo em javascript
+ * Geralmente utilizamos callbacks
+ */
+function esperar3s(callback) {
+    setTimeout(function () {
+        callback('3s depois...');
+    }, 3000);
+}
+esperar3s(function (resultado) {
+    console.log(resultado);
+});
 //# sourceMappingURL=ecmascript.js.map

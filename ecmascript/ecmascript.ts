@@ -189,4 +189,19 @@ console.log(notas1, notas2, notas3);
 const cientista = {primeiroNome: "Will", experiencia: 12}
 const {primeiroNome, experiencia} = cientista
 
-console.log(primeiroNome, experiencia)
+console.log(primeiroNome, experiencia);
+
+/**
+ * Assincronismo em javascript
+ * Geralmente utilizamos callbacks
+ */
+
+ function esperar3s(callback: (dado: string) => void){
+   setTimeout(() => {
+     callback('3s depois...');
+   }, 3000)
+ }
+
+esperar3s(function(resultado: string){
+  console.log(resultado);
+})
