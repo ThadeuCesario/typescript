@@ -6,7 +6,6 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
-var _this = this;
 /**
  * var, let e const
  *
@@ -59,14 +58,18 @@ var saudacao = function () { return console.log('olá'); };
 saudacao();
 var falarCom = function (pessoa) { return console.log("Ol\u00E1 " + pessoa); };
 falarCom('Thadeu Munhóz Cesário');
-function normalComThis() {
-    console.log(this);
+/*
+function normalComThis(){
+  console.log(this);
 }
 normalComThis();
-var normalComThisEspecial = normalComThis.bind({ nome: 'Ana' });
+
+const normalComThisEspecial = normalComThis.bind({nome: 'Ana'});
 normalComThisEspecial();
-var arrowComThis = function () { return console.log(_this); };
+
+const arrowComThis = () => console.log(this);
 arrowComThis();
+*/
 function contagemRegressiva(inicio) {
     if (inicio === void 0) { inicio = 3; }
     console.log(inicio);

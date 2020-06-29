@@ -59,7 +59,7 @@ saudacao();
 
 const falarCom = (pessoa: string): void => console.log(`Olá ${pessoa}`);
 falarCom('Thadeu Munhóz Cesário');
-
+/*
 function normalComThis(){
   console.log(this);
 }
@@ -70,7 +70,7 @@ normalComThisEspecial();
 
 const arrowComThis = () => console.log(this);
 arrowComThis();
-
+*/
 function contagemRegressiva(inicio: number = 3): void{
   console.log(inicio);
   while(inicio > 0){
