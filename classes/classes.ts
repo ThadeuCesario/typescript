@@ -80,6 +80,12 @@ console.log(casamentoSmart);
    public discountPrice(currentProductPrice : number, currentDiscountProduct: number): number{
      return (currentProductPrice - ((currentProductPrice * currentDiscountProduct)));
    }
+
+   /*
+   precoComDesconto(): number{
+     return this.productPrice * (1 - this.productDiscount);
+   }
+   */
  }
 
 const celular = new Product('Galaxy s10', 3500, 0.1);
