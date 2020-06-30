@@ -37,4 +37,22 @@ const casamentoSmart = new DataSmart();
 console.log(casamentoSmart);
 casamentoSmart.ano = 3500;
 console.log(casamentoSmart);
+/**
+ * Desafio Produto
+ * Atributos: nome, preco e desconto.
+ * Criar o construtor
+ * Obs 1: Desconto é opcional (valor padrão 0)
+ * Obs 2: Criar dois produtos: passando dois e três parametros
+ */
+class Product {
+    constructor(productName, productPrice, productDiscount = 0) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productDiscount = productDiscount;
+    }
+}
+const celular = new Product('Galaxy s10', 3500, 10);
+console.log(celular);
+const geladeira = new Product('Geladeira', 1500);
+console.log(geladeira);
 //# sourceMappingURL=classes.js.map
