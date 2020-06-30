@@ -64,10 +64,29 @@ console.log(casamentoSmart);
       this.productPrice = productPrice;
       this.productDiscount = productDiscount;
    }
+
+   public resumo(): string {
+      return `${this.productName} custa R$${this.productPrice} (${this.productDiscount * 100}% OFF)`;
+   }
+
  }
 
-const celular = new Product('Galaxy s10', 3500, 10);
+const celular = new Product('Galaxy s10', 3500, 0.1);
 console.log(celular);
+console.log(celular.resumo());
 
 const geladeira = new Product('Geladeira', 1500);
 console.log(geladeira);
+console.log(geladeira.resumo());
+
+/**
+ * Paradigma de objeto, enxerga o mundo como um grande conjunto de objetos e como esses objetos interagem entre si.
+ * Por exemplo uma televisão, ela possui atributos que são caracteristicas da TV. Como por exemplo: Altura, largura, profundidade, cores, peso. Tudo isso, são os atributos
+ * (características) da televisão. 
+ * Juntamente com esses atributos a televisão também possui comportamentos. Os comportamentos são as ações (métodos), então por exemplo: ligar, desligar, mudar de canal, aumentar volume.
+ * As ações podem alterar os atributos do objeto.
+ * 
+ * Lembrando que quando estamos criando métodos dentro de uma classe, para acessarmos os atributos dessa classe. Utilizamos o 'this'. Se não colocar o this,
+ * eu não estarei referenciando o atributo. Por tanto ou vou estar trabalhando com o parãmetro passado pela função, ou então vou estar trabalhando com alguma 
+ * variável interna daquele método.
+ */
