@@ -50,16 +50,22 @@ class Product {
         this.productPrice = productPrice;
         this.productDiscount = productDiscount;
     }
-    resumo() {
-        return `${this.productName} custa R$${this.productPrice} (${this.productDiscount * 100}% OFF)`;
+    resume() {
+        return `${this.productName} custa R$${this.discountPrice(this.productPrice, this.productDiscount)} (${this.productDiscount * 100}% OFF)`;
+    }
+    discountPrice(currentProductPrice, currentDiscountProduct) {
+        return (currentProductPrice - ((currentProductPrice * currentDiscountProduct)));
     }
 }
 const celular = new Product('Galaxy s10', 3500, 0.1);
 console.log(celular);
-console.log(celular.resumo());
+console.log(celular.resume());
 const geladeira = new Product('Geladeira', 1500);
 console.log(geladeira);
-console.log(geladeira.resumo());
+console.log(geladeira.resume());
+const notebook = new Product('samsung', 1000, 0.5);
+console.log(notebook);
+console.log(notebook.resume());
 /**
  * Paradigma de objeto, enxerga o mundo como um grande conjunto de objetos e como esses objetos interagem entre si.
  * Por exemplo uma televisão, ela possui atributos que são caracteristicas da TV. Como por exemplo: Altura, largura, profundidade, cores, peso. Tudo isso, são os atributos

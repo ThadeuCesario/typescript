@@ -58,7 +58,7 @@ console.log(casamentoSmart);
 
 /**
  * Desafio 2 - Produto
- * Cria método precoComDesconto
+ * Cria método precoComDesconto.
  * Quais são os parâmetros e o retorno?
  * Alterar método resumo para mostrar o preço com desconto.
  */
@@ -73,19 +73,26 @@ console.log(casamentoSmart);
       this.productDiscount = productDiscount;
    }
 
-   public resumo(): string {
-      return `${this.productName} custa R$${this.productPrice} (${this.productDiscount * 100}% OFF)`;
+   public resume(): string {
+      return `${this.productName} custa R$${this.discountPrice(this.productPrice, this.productDiscount)} (${this.productDiscount * 100}% OFF)`;
    }
 
+   public discountPrice(currentProductPrice : number, currentDiscountProduct: number): number{
+     return (currentProductPrice - ((currentProductPrice * currentDiscountProduct)));
+   }
  }
 
 const celular = new Product('Galaxy s10', 3500, 0.1);
 console.log(celular);
-console.log(celular.resumo());
+console.log(celular.resume());
 
 const geladeira = new Product('Geladeira', 1500);
 console.log(geladeira);
-console.log(geladeira.resumo());
+console.log(geladeira.resume());
+
+const notebook = new Product('samsung', 1000, 0.5);
+console.log(notebook);
+console.log(notebook.resume());
 
 /**
  * Paradigma de objeto, enxerga o mundo como um grande conjunto de objetos e como esses objetos interagem entre si.
