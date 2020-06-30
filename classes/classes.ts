@@ -27,3 +27,21 @@ const casamento = new Data();
 console.log(casamento);
 casamento.ano = 2121;
 console.log(casamento);
+
+/*************************************/
+
+class DataSmart{
+  constructor(public dia: number = 1, public mes: number = 1, public ano: number = 1970){
+
+  }
+}
+
+const aniversarioSmart = new DataSmart(4, 11, 1994);
+aniversarioSmart.dia = 4;
+console.log(aniversarioSmart.dia);
+console.log(DataSmart);
+
+const casamentoSmart = new DataSmart();
+console.log(casamentoSmart);
+casamentoSmart.ano = 3500;
+console.log(casamentoSmart);
