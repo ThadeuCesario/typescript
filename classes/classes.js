@@ -38,7 +38,7 @@ console.log(casamentoSmart);
 casamentoSmart.ano = 3500;
 console.log(casamentoSmart);
 /**
- * Desafio Produto
+ * Desafio 1 - Produto
  * Atributos: nome, preco e desconto.
  * Criar o construtor
  * Obs 1: Desconto é opcional (valor padrão 0)
