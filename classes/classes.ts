@@ -115,9 +115,27 @@ console.log(notebook.resume());
  /**************************************/
  /**
   * private => visivel somente dentro da classe
-  * 
+  * O grande objetivo de termos um atributo privado que ninguem consegue acessar, é porque a própria classe Carro, terá total controle de como
+  * manipular esse atributo que está private.
   */
 
 class Carro {
   private velocidadeAtual: number = 0;
+
+  constructor(public marca: string, public modelo: string, private velocidadeMaxima: number = 200){
+
+  }
+
+  private alterarVelocidade(delta: number): number{
+    const novaVelocidade = this.velocidadeAtual + delta;
+    const velocidadeValida= novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
+
+    if(velocidadeValida){
+      this.velocidadeAtual = novaVelocidade;
+    }
+    else{
+      this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0;
+    }
+
+  }
 }
