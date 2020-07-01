@@ -99,6 +99,32 @@ class Carro {
         else {
             this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0;
         }
+        return this.velocidadeAtual;
+    }
+    acelerar() {
+        return this.alterarVelocidade(5);
+    }
+    frear() {
+        return this.alterarVelocidade(-5);
     }
 }
+const carro1 = new Carro('Ford', 'Ka', 185);
+console.log(carro1.acelerar());
+/* Hack para chamar uma função várias vezes.
+ */
+Array(50).fill(0).forEach(() => console.log(carro1.acelerar()));
+console.log(carro1.frear());
+Array(50).fill(0).forEach(() => console.log(carro1.frear()));
+//SIMULANDO ERROS
+/**
+ * Acessando um atributo private e ainda estourando a velocidade máxima suportada.
+ * Isso acontece porque o javascript gerado permite esse tipo de ação!
+ * Mas podemos configurar nosso typescript para que ele não gere nenhum javascript em caso de erro.
+ */
+carro1.velocidadeAtual = 1000;
+console.log('atual =>', carro1.velocidadeAtual);
+carro1.velocidadeMaxima = 200;
+console.log('máxima =>', carro1.velocidadeMaxima);
+carro1.alterarVelocidade(150);
+console.log('atual ->', carro1.velocidadeAtual);
 //# sourceMappingURL=classes.js.map
