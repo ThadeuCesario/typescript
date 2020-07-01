@@ -111,3 +111,13 @@ console.log(notebook.resume());
  * eu não estarei referenciando o atributo. Por tanto ou vou estar trabalhando com o parãmetro passado pela função, ou então vou estar trabalhando com alguma 
  * variável interna daquele método.
  */
+
+ /**************************************/
+ /**
+  * private => visivel somente dentro da classe
+  * 
+  */
+
+class Carro {
+  private velocidadeAtual: number = 0;
+}

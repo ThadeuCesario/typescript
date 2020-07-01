@@ -76,5 +76,15 @@ console.log(notebook.resume());
  * Lembrando que quando estamos criando métodos dentro de uma classe, para acessarmos os atributos dessa classe. Utilizamos o 'this'. Se não colocar o this,
  * eu não estarei referenciando o atributo. Por tanto ou vou estar trabalhando com o parãmetro passado pela função, ou então vou estar trabalhando com alguma
  * variável interna daquele método.
- */ 
+ */
+/**************************************/
+/**
+ * private => visivel somente dentro da classe
+ *
+ */
+class Carro {
+    constructor() {
+        this.velocidadeAtual = 0;
+    }
+}
 //# sourceMappingURL=classes.js.map
