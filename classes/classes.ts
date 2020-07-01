@@ -216,16 +216,20 @@ console.log('atual ->', carro1.velocidadeAtual);
  */
 
  class Ferrari extends Carro{
-  public acelerar(): number{
-    return this.alterarVelocidade(20);
-  }
+    constructor(marca: string, valocidadeMaxima: number){
+      super('Ferrari', marca, valocidadeMaxima);
+    }
 
-  public frear(): number{
-    return this.alterarVelocidade(-15);
-  }
+    public acelerar(): number{
+      return this.alterarVelocidade(20);
+    }
+
+    public frear(): number{
+      return this.alterarVelocidade(-15);
+    }
  }
 
- const f40 = new Ferrari('Ferrari', 'f40', 324);
+ const f40 = new Ferrari('f40', 324);
  console.log(`${f40.marca}, ${f40.modelo}`);
  console.log(f40.acelerar());
  console.log(f40.frear());
