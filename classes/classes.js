@@ -180,4 +180,32 @@ const f40 = new Ferrari('f40', 324);
 console.log(`${f40.marca}, ${f40.modelo}`);
 console.log(f40.acelerar());
 console.log(f40.frear());
+/**
+ * Getters and Setters
+ * Uma vantagem do javascript é que não precisamos colocar a nomenclatura getNome()
+ * ou setNome(), como acontece por exemplo no java.
+ * Basicamente:
+ * getter -> leitura do atributo
+ * setter -> escrito do atributo
+ *
+ * * Uma convenção de quando estamos trabalhando com um atributo privado é utilizar
+ * o underline antes do nome do atributo.
+ * Então veja:
+ * private _nome: string = 'Thadeu'
+ *
+ * Veja que tenho uma variável private, do tipo string.
+ */
+class Pessoa {
+    constructor() {
+        this._idade = 0;
+    }
+    get getIdade() {
+        return this._idade;
+    }
+    set setIdade(idade) {
+        if (idade >= 0 && idade <= 120) {
+            this._idade = idade;
+        }
+    }
+}
 //# sourceMappingURL=classes.js.map
