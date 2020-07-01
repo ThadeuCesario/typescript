@@ -127,4 +127,47 @@ carro1.velocidadeMaxima = 200;
 console.log('máxima =>', carro1.velocidadeMaxima);
 carro1.alterarVelocidade(150);
 console.log('atual ->', carro1.velocidadeAtual);
+/**
+ * Pilares da orientação à objeto:
+ * Encapsulamento, herança, polimorfismo e abstração.
+ * Esses são os pilares importantes da orientação a objeto.
+ *
+ * 1) Herança -> Capacidade de reusar código.
+ * Uma forma muito comum de reutilizarmos código é através da composição, isso é desmembrar
+ * objetos grandes e complexos em objetos menos e simples de serem entendidos.
+ * Então toda vez que virmos algo do tipo :
+ * "Um carro TEM UM motor"
+ * "Um carro TEM QUATRO portas"
+ * Esses tipos de analogias, estamos trabalhando com composição. Isso porque para formar, o
+ * objeto carro, precisamos da composição de vários outros elementos menores.
+ *
+ * Agora quando temos uma frase "É UM", então muito provavelmente estamos trabalahando com uma relação
+ * de herança. Por exemplo:
+ * Por exemplo:
+ * "Ferrari É UM carro"
+ * Veja que temos uma relação de ferrari com carro, logo a ferrari está herdando de carro.
+ *
+ * Veja o exemplo abaixo que eu criei uma classe 'Ferrari' e extendi de Carro.
+ * Então nesse momento eu não preciso copiar o código inteiro da classe de Carro, porque
+ * a classe Ferrari já está extendendo esse código.
+ * Veja inclusive que logo abaixo já instãnciei uma nova ferrari.
+ *
+ * Mas veja que eu sobreescrevi a função acelerar e frear para a classe Ferrari,
+ * isso é perfeitamente normal. Temos um detalhe, tanto os atributos, quanto
+ * os métodos privados não são transmitidos por herança.
+ * Para conseguirmos passar um método por herança precisamos utilizar o modificador de
+ * acesso 'protected'
+ */
+class Ferrari extends Carro {
+    acelerar() {
+        return this.alterarVelocidade(20);
+    }
+    frear() {
+        return this.alterarVelocidade(-15);
+    }
+}
+const f40 = new Ferrari('Ferrari', 'f40', 324);
+console.log(`${f40.marca}, ${f40.modelo}`);
+console.log(f40.acelerar());
+console.log(f40.frear());
 //# sourceMappingURL=classes.js.map
