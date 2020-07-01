@@ -205,7 +205,14 @@ console.log('atual ->', carro1.velocidadeAtual);
  * isso é perfeitamente normal. Temos um detalhe, tanto os atributos, quanto
  * os métodos privados não são transmitidos por herança.
  * Para conseguirmos passar um método por herança precisamos utilizar o modificador de 
- * acesso 'protected'
+ * acesso 'protected'.
+ * 
+ * Public -> Visível para todo mundo.
+ * Private -> Visível somente dentro da classe.
+ * Protected -> Além de ser visível dentro da classe, também é transmitido por herança. 
+ * 
+ * Herança é uma forma de reutilizar código, porém a melhor forma de reutilizar código
+ * é a composição.
  */
 
  class Ferrari extends Carro{
