@@ -217,4 +217,27 @@ pessoa1.setIdade = 10;
 console.log(`Capturando a idade : ${pessoa1.getIdade}`);
 pessoa1.setIdade = -10; //valor não aprovado pelo método set.
 console.log(`Capturando a idade : ${pessoa1.getIdade}`);
+/**
+ * Membros estáticos
+ * Quando temos algo estático significa que esse atributo ou método pertence a classe e não a instancia.
+ * Isso é, significa que os atributos e os métodos estão no nível da classe e não disponível para
+ * cada uma das instãncias.
+ *
+ *
+ */
+class Matematica {
+    static areaCirc(raio) {
+        return this.PI * raio * raio;
+    }
+}
+Matematica.PI = 3.1416;
+/*
+const m1 = new Matematica();
+m1.PI = 4.2;
+console.log(m1.areaCirc(4));
+
+const m2 = new Matematica();
+console.log(m2.areaCirc(4));
+*/
+console.log(Matematica.areaCirc(4));
 //# sourceMappingURL=classes.js.map
