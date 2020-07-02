@@ -249,6 +249,34 @@ console.log(Matematica.areaCirc(4));
  * criar uma instância nessa classe. Portanto a vantagem de termos uma classe abstrata é a possibilidade de reutilizarmos código,
  * a partir de uma classe abstrata.
  *
- * Dentro de uma classe abstract, temos a possibilidade de definir métodos abstratos.
+ * Dentro de uma classe abstract, temos a possibilidade de definir métodos abstratos (claro que podemos definir métodos concretos).
+ * Métodos abstratos, são funções inacabada. Provavelmente será útil quando esses métodos variarem por classe.
+ *
+ * Detalhe uma classe concreta que é filha de uma classe abstrata, deve obrigatoriamente implementar todos os métodos que são
+ * abstratos.
  */
+class Calculo {
+    constructor() {
+        this.resultado = 0;
+    }
+    getResultado() {
+        return this.resultado;
+    }
+}
+class Soma extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((acumulador, valorAtual) => acumulador + valorAtual);
+    }
+}
+class Multiplicacao extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((acumulador, valorAtual) => acumulador * valorAtual);
+    }
+}
+let c1 = new Soma(); //Esse é um exemplo de polimorfismo, que apartir de tipos mais genéricos, conseguimos associar tipos mais específicos.
+c1.executar(2, 5, 10, 20, 80);
+console.log(c1.getResultado());
+c1 = new Multiplicacao();
+c1.executar(2, 5, 10, 20, 80, 80, 90, 100, 89, 75, 1000);
+console.log(c1.getResultado());
 //# sourceMappingURL=classes.js.map
