@@ -246,8 +246,9 @@ console.log(Matematica.areaCirc(4));
  * Ninguem realmente possui um "Celular", possuímos um modelo de uma determinada empresa que atende os requisitos
  * para considerarmos um celular.
  * Quando trazemos para o typescript (para orientação a objeto), quando temos uma classe abstrata, não conseguimos
- * criar uma instância nessa classe.
+ * criar uma instância nessa classe. Portanto a vantagem de termos uma classe abstrata é a possibilidade de reutilizarmos código,
+ * a partir de uma classe abstrata.
  *
- *
+ * Dentro de uma classe abstract, temos a possibilidade de definir métodos abstratos.
  */
 //# sourceMappingURL=classes.js.map
