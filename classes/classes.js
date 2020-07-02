@@ -121,12 +121,16 @@ Array(50).fill(0).forEach(() => console.log(carro1.frear()));
  * Isso acontece porque o javascript gerado permite esse tipo de ação!
  * Mas podemos configurar nosso typescript para que ele não gere nenhum javascript em caso de erro.
  */
+/*
 carro1.velocidadeAtual = 1000;
 console.log('atual =>', carro1.velocidadeAtual);
+
 carro1.velocidadeMaxima = 200;
 console.log('máxima =>', carro1.velocidadeMaxima);
+
 carro1.alterarVelocidade(150);
 console.log('atual ->', carro1.velocidadeAtual);
+*/
 /**
  * Pilares da orientação à objeto:
  * Encapsulamento, herança, polimorfismo e abstração.
@@ -208,4 +212,9 @@ class Pessoa {
         }
     }
 }
+const pessoa1 = new Pessoa();
+pessoa1.setIdade = 10;
+console.log(`Capturando a idade : ${pessoa1.getIdade}`);
+pessoa1.setIdade = -10; //valor não aprovado pelo método set
+console.log(`Capturando a idade : ${pessoa1.getIdade}`);
 //# sourceMappingURL=classes.js.map
