@@ -240,4 +240,14 @@ const m2 = new Matematica();
 console.log(m2.areaCirc(4));
 */
 console.log(Matematica.areaCirc(4));
+/**
+ * Classe Abstrata
+ * Vamos trazer para o mundo real o que seria uma classe abstrata. Por exemplo, um celular.
+ * Ninguem realmente possui um "Celular", possuímos um modelo de uma determinada empresa que atende os requisitos
+ * para considerarmos um celular.
+ * Quando trazemos para o typescript (para orientação a objeto), quando temos uma classe abstrata, não conseguimos
+ * criar uma instância nessa classe.
+ *
+ *
+ */
 //# sourceMappingURL=classes.js.map
