@@ -215,6 +215,6 @@ class Pessoa {
 const pessoa1 = new Pessoa();
 pessoa1.setIdade = 10;
 console.log(`Capturando a idade : ${pessoa1.getIdade}`);
-pessoa1.setIdade = -10; //valor não aprovado pelo método set
+pessoa1.setIdade = -10; //valor não aprovado pelo método set.
 console.log(`Capturando a idade : ${pessoa1.getIdade}`);
 //# sourceMappingURL=classes.js.map
