@@ -390,8 +390,8 @@ console.log('atual ->', carro1.velocidadeAtual);
      }
 
      const turboHelice = new Aviao('Tu-114', 'PT-ABC');
-     turboHelice.modelo = 'DC-8';
-     turboHelice.prefixo = 'Ab-123';
+     //turboHelice.modelo = 'DC-8';
+     //turboHelice.prefixo = 'Ab-123';
      console.log(turboHelice);
 
 
