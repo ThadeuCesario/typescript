@@ -227,7 +227,7 @@ console.log(`Capturando a idade : ${pessoa1.getIdade}`);
  */
 class Matematica {
     static areaCirc(raio) {
-        return this.PI * raio * raio;
+        return Matematica.PI * raio * raio;
     }
 }
 Matematica.PI = 3.1416;
@@ -279,4 +279,29 @@ console.log(c1.getResultado());
 c1 = new Multiplicacao();
 c1.executar(2, 5, 10, 20, 80, 80, 90, 100, 89, 75, 1000);
 console.log(c1.getResultado());
+/**
+ * Singleton
+ * Tornando o construtor privado.
+ * Geralmente usamos singleton, quando queremos ter apenas uma única instancia,
+ * mas ainda assim queremos trabalhar com herança, métodos..
+ * Quando trabalharmos com static, a questão da herança é um pouco mais complexa
+ * de ser implementada. Não funciona de uma forma tão fluida quanto trabalhar com
+ * métodos de instância.
+ *
+ * Outro exemplo de usar singleton, pode ser até para várias instâncias,
+ * se levarmos o caso de um pull de conexões. Seguindo esse modelo podemos
+ * ter o controle da criação das instâncias.
+ */
+class Unico {
+    constructor() { }
+    static getInstance() {
+        return Unico.instance;
+    }
+    agora() {
+        return new Date;
+    }
+}
+Unico.instance = new Unico;
+//const errado = new Unico();
+console.log(Unico.getInstance().agora());
 //# sourceMappingURL=classes.js.map
