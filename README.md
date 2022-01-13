@@ -22,7 +22,12 @@ Supondo que eu não passe diretamente a tipagem para uma variável, o próprio t
 
 O Typescript não possui uma tipagem diferente para números inteiros e números flutuantes.
 
-Uma
+Uma das vantagens do TypeScript é que podemos adotar o TypeScript de forma gradual. 
+Não precisamos realizar uma grande migração para conseguir aplicar o TS.
+
+Tipo any -> Aceita qualquer tipo de valor aplicado à variável.
+Podemos com esse tipo trabalhar de uma forma muito gradativa com o TS.
+
 
 
 ###########################
