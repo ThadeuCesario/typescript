@@ -114,3 +114,9 @@ function tuplaParam2(...params: [number,string,boolean]): void {
     console.log(`1) ${params}`);
 }
 tuplaParam2(...tupla);
+
+// Destructuring
+const caracteristicas = ['Thadeu', 27]
+const [nameUser, ageUser] =  caracteristicas;
+console.log("=> nameUser", nameUser);
+console.log("=> ageUser", ageUser);
