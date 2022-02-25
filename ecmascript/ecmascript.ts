@@ -32,3 +32,11 @@ for(var i = 0; i < 10; i++) {
     console.log(i);
 }
 console.log(i);
+
+// Arrow function
+// retorno implicito
+const somar = (n1:number, n2:number): number => n1 + n2;
+console.log(somar(2, 5));
+
+const subtrair = (n1:number, n2:number): number => n1 - n2;
+console.log(subtrair(2, 5));
