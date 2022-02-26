@@ -33,4 +33,33 @@ const somar = (n1, n2) => n1 + n2;
 console.log(somar(2, 5));
 const subtrair = (n1, n2) => n1 - n2;
 console.log(subtrair(2, 5));
+const saudacao = () => console.log("ola");
+saudacao();
+// No typescript precisamos colocar parenteses para realizar a tipagem, mesmo se tiver somente um parametro!
+const falarCom = (pessoa) => console.log(`Ola ${pessoa}`);
+falarCom('Thadeu Munhoz Cesario');
+// this
+function normalComThis() {
+    console.log(this);
+}
+normalComThis();
+/**
+ * Veja que no caso da função normalComThisEspecial, estamos passando um bind apontando para
+ * a função normalComThis. Nesse caso o que passei dentro do bind como parametro
+ * será o valor que this possui na função normalComThis!
+ */
+const normalComThisEspecial = normalComThis.bind(1234);
+normalComThisEspecial();
+// this em arrow function 
+/**
+ * No caso do this dentro de uma arrow function, será apontado automaticamente para
+ * onde aquela função foi definida... por exemplo no browser, pode ser diretamente
+ * no contexto do window
+ * Para saber qual o this de uma função arrow, basta checar qual o this antes de função se definida
+ */
+console.log(this);
+const arrowComThis = () => console.log(this);
+console.log(arrowComThis());
+const arrowComThisEspecial = arrowComThis.bind("3456");
+arrowComThisEspecial(); // o bind não sobrepoe o comportamento do this em arrow functions
 //# sourceMappingURL=ecmascript.js.map
