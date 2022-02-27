@@ -62,4 +62,14 @@ const arrowComThis = () => console.log(this);
 console.log(arrowComThis());
 const arrowComThisEspecial = arrowComThis.bind("3456");
 arrowComThisEspecial(); // o bind não sobrepoe o comportamento do this em arrow functions
+function contagemRegressiva(inicio = 5, fim = inicio - 5) {
+    console.log(inicio);
+    while (inicio > fim) {
+        inicio--;
+        console.log(inicio);
+    }
+    console.log("Fim!");
+}
+contagemRegressiva();
+contagemRegressiva(3);
 //# sourceMappingURL=ecmascript.js.map
