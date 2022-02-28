@@ -85,5 +85,15 @@ function contagemRegressiva(inicio: number = 5, fim: number = inicio - 5): void 
     }
     console.log("Fim!");
 }
-contagemRegressiva()
-contagemRegressiva(3)
+contagemRegressiva();
+contagemRegressiva(3);
+
+// Rest e spread
+const numbers = [1, 20, -5, 30, 670];
+console.log(Math.max(...numbers));
+
+const turmaA: string[] = ['Ana', 'Pedro', 'João'];
+const turmaB: string[] = ['José', 'Daryl', 'Rick'];
+console.log(turmaA.concat(turmaB));
+console.log(turmaA.push(...turmaB));
+console.log(turmaA);

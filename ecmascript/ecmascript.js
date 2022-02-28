@@ -72,4 +72,12 @@ function contagemRegressiva(inicio = 5, fim = inicio - 5) {
 }
 contagemRegressiva();
 contagemRegressiva(3);
+// Rest e spread
+const numbers = [1, 20, -5, 30, 670];
+console.log(Math.max(...numbers));
+const turmaA = ['Ana', 'Pedro', 'João'];
+const turmaB = ['José', 'Daryl', 'Rick'];
+console.log(turmaA.concat(turmaB));
+console.log(turmaA.push(...turmaB));
+console.log(turmaA);
 //# sourceMappingURL=ecmascript.js.map
