@@ -80,4 +80,6 @@ const turmaB = ['José', 'Daryl', 'Rick'];
 console.log(turmaA.concat(turmaB));
 console.log(turmaA.push(...turmaB));
 console.log(turmaA);
+const retornarArray = (a, ...args) => [a, ...args];
+console.log(retornarArray(10, 1, 2, 3, 4, 5));
 //# sourceMappingURL=ecmascript.js.map
