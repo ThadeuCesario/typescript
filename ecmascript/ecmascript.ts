@@ -115,8 +115,23 @@ function tuplaParam2(...params: [number,string,boolean]): void {
 }
 tuplaParam2(...tupla);
 
-// Destructuring
+// Destructuring array
 const caracteristicas = ['Thadeu', 27]
 const [nameUser, ageUser] =  caracteristicas;
 console.log("=> nameUser", nameUser);
 console.log("=> ageUser", ageUser);
+
+// Destructuring object
+const aluno = {
+    nome2: 'Thadeu',
+    idade2: 27,
+    details: {
+        a: '123.123123.123'
+    }
+};
+
+// igual realizamos com props no react
+const {nome2, idade2, details: {a}} = aluno;
+console.log("=>>> nome2", nome2);
+console.log("=>>> idade2", idade2);
+console.log("=>>> a", a);
