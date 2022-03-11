@@ -1,5 +1,6 @@
 interface Humano {
     nome: string;
+    idade?: number;
 }
 
 function saudarComOla(pessoa: Humano) {
@@ -18,3 +19,5 @@ const pessoa = {
 saudarComOla(pessoa);
 mudarNome(pessoa);
 saudarComOla(pessoa);
+saudarComOla({nome: 'Eric Cartman', idade: 27});
+saudarComOla({nome: 'Kyle'});
