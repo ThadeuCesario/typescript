@@ -21,3 +21,25 @@ const avaliacoes: Array<number> = [10, 8, 7];
 avaliacoes.push(8.6);
 // avaliacoes.push('4.5');
 console.log(avaliacoes);
+
+// Array
+function imprimir<T>(args: T[]) {
+    args.forEach(elemento => console.log(elemento));
+}
+
+imprimir([1, 2, 3]);
+imprimir<number>([1, 2, 3]);
+imprimir<string>(['Thadeu', 'Karina', 'Meggy']);
+imprimir<{nome: string, idade: number}>([
+    {nome: 'Thadeu', idade: 27},
+    {nome: 'Karina', idade: 29},
+    {nome: 'Meggy', idade: 1}
+]);
+
+type Aluno = {nome: string, idade: number};
+
+imprimir<Aluno>([
+    {nome: 'Thadeu', idade: 27},
+    {nome: 'Karina', idade: 29},
+    {nome: 'Meggy', idade: 1}
+]);
