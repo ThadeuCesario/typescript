@@ -43,3 +43,8 @@ imprimir<Aluno>([
     {nome: 'Karina', idade: 29},
     {nome: 'Meggy', idade: 1}
 ]);
+
+// Tipo Genérico
+type Echo = <T>(data: T) => T
+const chamarEcho:Echo = echoMelhorado;
+console.log(chamarEcho<string>('Alguma coisa'));
