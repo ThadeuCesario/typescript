@@ -86,3 +86,66 @@ class DiferencaEntreDatas extends OperacaoBinaria<Data, string> {
 const d1 = new Data(1, 2, 2020);
 const d2 = new Data(5, 2, 2020);
 console.log(new DiferencaEntreDatas(d1, d2).executar());
+
+// Desafio Classe File
+// Atributo: fila (Array)
+// métodos: entrar, próximo, imprimir
+
+class Fila<T> {
+    constructor(public fila: T[]) {}
+
+    entrar(elemento: T): void {
+        this.fila.push(elemento);
+    }
+
+    proximo(): void {
+        this.fila.shift();
+    }
+
+    imprimir(): void {
+        console.log(this.fila);
+    }
+}
+
+const fila1 = new Fila<string>([]);
+fila1.entrar('Thadeu');
+fila1.entrar('Karina');
+fila1.entrar('Meggy');
+fila1.proximo();
+fila1.entrar('André');
+fila1.imprimir();
+
+
+class FilaCoder<T> {
+    private fila: Array<T>;
+
+    constructor(...args: T[]) {
+        this.fila = args;
+    }
+
+    entrar(elemento: T) {
+        this.fila.push(elemento);
+    }
+
+    proximo(): T | null {
+        if(this.fila.length >= 0 && this.fila[0]) {
+            const primeiro = this.fila[0];
+            this.fila.splice(0, 1);
+            return primeiro;
+        }
+        return null;
+    }
+
+    imprimir() {
+        console.log(this.fila)
+    }
+}
+
+const filaDaCoder = new FilaCoder<string>('Gui', 'Pedro', 'Ana', 'Lu');
+filaDaCoder.imprimir();
+filaDaCoder.entrar('Rafael');
+filaDaCoder.imprimir();
+console.log(filaDaCoder.proximo());
+console.log(filaDaCoder.proximo());
+console.log(filaDaCoder.proximo());
+filaDaCoder.imprimir();

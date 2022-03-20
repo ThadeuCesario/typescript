@@ -68,4 +68,55 @@ class DiferencaEntreDatas extends OperacaoBinaria {
 const d1 = new Data(1, 2, 2020);
 const d2 = new Data(5, 2, 2020);
 console.log(new DiferencaEntreDatas(d1, d2).executar());
+// Desafio Classe File
+// Atributo: fila (Array)
+// métodos: entrar, próximo, imprimir
+class Fila {
+    constructor(fila) {
+        this.fila = fila;
+    }
+    entrar(elemento) {
+        this.fila.push(elemento);
+    }
+    proximo() {
+        this.fila.shift();
+    }
+    imprimir() {
+        console.log(this.fila);
+    }
+}
+const fila1 = new Fila([]);
+fila1.entrar('Thadeu');
+fila1.entrar('Karina');
+fila1.entrar('Meggy');
+fila1.proximo();
+fila1.entrar('André');
+fila1.imprimir();
+class FilaCoder {
+    constructor(...args) {
+        this.fila = args;
+    }
+    entrar(elemento) {
+        this.fila.push(elemento);
+    }
+    proximo() {
+        if (this.fila.length >= 0 && this.fila[0]) {
+            const primeiro = this.fila[0];
+            this.fila.splice(0, 1);
+            return primeiro;
+        }
+        return null;
+    }
+    imprimir() {
+        console.log(this.fila);
+    }
+}
+const filaDaCoder = new FilaCoder('Gui', 'Pedro', 'Ana', 'Lu');
+filaDaCoder.imprimir();
+filaDaCoder.entrar('Rafael');
+filaDaCoder.imprimir();
+console.log(filaDaCoder.proximo());
+console.log(filaDaCoder.proximo());
+console.log(filaDaCoder.proximo());
+filaDaCoder.imprimir();
 //# sourceMappingURL=genericos.js.map
