@@ -116,7 +116,7 @@ fila1.entrar('André');
 fila1.imprimir();
 
 
-class FilaCoder<T> {
+class FilaCoder<T extends number | string> { //constraints
     private fila: Array<T>;
 
     constructor(...args: T[]) {
