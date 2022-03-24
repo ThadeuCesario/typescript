@@ -17,17 +17,6 @@ function decorator(obj) {
         console.log(obj.a + ' ' + obj.b);
     };
 }
-// @logarClasse //Esse decorator será chamado somente quando a classe for carregada
-// @decorator({a: 'Teste', b: 123})
-// @logarClasseSe(true)
-let Eletrodomestico = class Eletrodomestico {
-    constructor() {
-        console.log("novo.....");
-    }
-};
-Eletrodomestico = __decorate([
-    logarObjeto
-], Eletrodomestico);
 function logarObjeto(construtor) {
     console.log("Carregado...");
     return class extends construtor {
@@ -38,7 +27,23 @@ function logarObjeto(construtor) {
         }
     };
 }
-new Eletrodomestico();
-new Eletrodomestico();
-new Eletrodomestico();
+// @logarClasse //Esse decorator será chamado somente quando a classe for carregada
+// @decorator({a: 'Teste', b: 123})
+// @logarClasseSe(true)
+// @logarObjeto
+let Eletrodomestico = class Eletrodomestico {
+    constructor() {
+        console.log("novo.....");
+    }
+};
+Eletrodomestico = __decorate([
+    imprimivel
+], Eletrodomestico);
+function imprimivel(construtor) {
+    construtor.prototype.imprimir = function () {
+        console.log(this);
+    };
+}
+const eletro = new Eletrodomestico();
+eletro.imprimir && eletro.imprimir();
 //# sourceMappingURL=decorators.js.map
