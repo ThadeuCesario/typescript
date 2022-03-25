@@ -30,13 +30,13 @@ function logarObjeto(construtor) {
 // @logarClasse //Esse decorator será chamado somente quando a classe for carregada
 // @decorator({a: 'Teste', b: 123})
 // @logarClasseSe(true)
-// @logarObjeto
 let Eletrodomestico = class Eletrodomestico {
     constructor() {
         console.log("novo.....");
     }
 };
 Eletrodomestico = __decorate([
+    logarObjeto,
     imprimivel
 ], Eletrodomestico);
 function imprimivel(construtor) {

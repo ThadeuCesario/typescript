@@ -38,7 +38,7 @@ interface Eletrodomestico {
 // @logarClasse //Esse decorator será chamado somente quando a classe for carregada
 // @decorator({a: 'Teste', b: 123})
 // @logarClasseSe(true)
-// @logarObjeto
+@logarObjeto
 @imprimivel
 class Eletrodomestico {
     constructor() {
