@@ -36,4 +36,19 @@ console.log(aniversarioEsperto);
 
 const casamentoEsperto = new DataEsperta // posso omitir os ()
 casamentoEsperto.ano = 2017;
-console.log(casamentoEsperto)
+console.log(casamentoEsperto);
+
+//========================================
+class Produto {
+    constructor(
+        public nome: string,
+        public preco: number,
+        public desconto: number = 0,
+    ){}
+}
+
+const p1 = new Produto('geladeira', 1700.50, 0.1);
+const p2 = new Produto('Fogão', 1000);
+
+console.log(p1);
+console.log(p2);
