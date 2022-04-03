@@ -135,3 +135,12 @@ const {nome2, idade2, details: {a}} = aluno;
 console.log("=>>> nome2", nome2);
 console.log("=>>> idade2", idade2);
 console.log("=>>> a", a);
+
+// template string
+const usuarioID: string = 'SuporteCod3r';
+const notificacoes: string = '9';
+const boasVindas = 'Boas vindas ' + usuarioID + ' Notificações: ' + notificacoes; //noob mode
+console.log(boasVindas);
+
+console.log(`Boas vindas ${usuarioID} Notificações: ${notificacoes}`); // template string mode hehe
+console.log(`${1+1+2+60*50}`);
