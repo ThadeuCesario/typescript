@@ -13,10 +13,10 @@ const cpf = '123.456.000-99';
 // cpf='456.780.999.11';
 console.log(cpf);
 var segredo = 'externo';
-function revelar() {
+const revelar = () => {
     var segredo = 'interno';
     console.log(segredo);
-}
+};
 revelar();
 console.log(segredo);
 {
@@ -58,10 +58,10 @@ normalComThisEspecial();
  * Para saber qual o this de uma função arrow, basta checar qual o this antes de função se definida
  */
 console.log(this);
-const arrowComThis = () => console.log(this);
-console.log(arrowComThis());
-const arrowComThisEspecial = arrowComThis.bind("3456");
-arrowComThisEspecial(); // o bind não sobrepoe o comportamento do this em arrow functions
+// const arrowComThis = () => console.log(this);
+// console.log(arrowComThis());
+// const arrowComThisEspecial = arrowComThis.bind("3456");
+// arrowComThisEspecial(); // o bind não sobrepoe o comportamento do this em arrow functions
 function contagemRegressiva(inicio = 5, fim = inicio - 5) {
     console.log(inicio);
     while (inicio > fim) {
@@ -118,4 +118,26 @@ const boasVindas = 'Boas vindas ' + usuarioID + ' Notificações: ' + notificaco
 console.log(boasVindas);
 console.log(`Boas vindas ${usuarioID} Notificações: ${notificacoes}`); // template string mode hehe
 console.log(`${1 + 1 + 2 + 60 * 50}`);
+//Callback
+function esperar3s(cb) {
+    setTimeout(() => {
+        cb("retorno callback");
+    }, 3000);
+}
+const readingCb = (param) => console.log("param =>", param);
+esperar3s(readingCb);
+function esperar3sPromise() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("3s depois........");
+        }, 4000);
+    });
+}
+esperar3sPromise().then(dado => console.log(dado));
+fetch('https://swapi.dev/api/people/1')
+    .then(resp => resp.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(respFilms => respFilms.json())
+    .then(respFilms => console.log(respFilms));
 //# sourceMappingURL=ecmascript.js.map

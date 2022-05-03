@@ -16,7 +16,7 @@ const cpf:string = '123.456.000-99';
 console.log(cpf);
 
 var segredo = 'externo';
-function revelar() {
+const revelar = () => {
     var segredo = 'interno';
     console.log(segredo);
 }
@@ -49,7 +49,7 @@ const falarCom = (pessoa: string) => console.log(`Ola ${pessoa}`);
 falarCom('Thadeu Munhoz Cesario');
 
 // this
-function normalComThis() {
+function normalComThis(this: any) {
     console.log(this);
 }
 normalComThis();
@@ -71,11 +71,11 @@ normalComThisEspecial();
  */
 
 console.log(this);
-const arrowComThis = () => console.log(this);
-console.log(arrowComThis());
+// const arrowComThis = () => console.log(this);
+// console.log(arrowComThis());
 
-const arrowComThisEspecial = arrowComThis.bind("3456");
-arrowComThisEspecial(); // o bind não sobrepoe o comportamento do this em arrow functions
+// const arrowComThisEspecial = arrowComThis.bind("3456");
+// arrowComThisEspecial(); // o bind não sobrepoe o comportamento do this em arrow functions
 
 function contagemRegressiva(inicio: number = 5, fim: number = inicio - 5): void {
     console.log(inicio);
@@ -144,3 +144,30 @@ console.log(boasVindas);
 
 console.log(`Boas vindas ${usuarioID} Notificações: ${notificacoes}`); // template string mode hehe
 console.log(`${1+1+2+60*50}`);
+
+//Callback
+
+function esperar3s(cb: Function) {
+    setTimeout(() => {
+        cb("retorno callback");
+    }, 3000)
+}
+
+const readingCb = (param: string) => console.log("param =>", param);
+esperar3s(readingCb);
+
+function esperar3sPromise(){
+    return new Promise((resolve: any) => {
+        setTimeout(() => {
+            resolve("3s depois........")
+        }, 4000);
+    }) 
+}
+esperar3sPromise().then(dado => console.log(dado));
+
+fetch('https://swapi.dev/api/people/1')
+    .then(resp => resp.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(respFilms => respFilms.json())
+    .then(respFilms => console.log(respFilms))
