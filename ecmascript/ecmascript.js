@@ -82,4 +82,15 @@ console.log(turmaA.push(...turmaB));
 console.log(turmaA);
 const retornarArray = (a, ...args) => [a, ...args];
 console.log(retornarArray(10, 1, 2, 3, 4, 5));
+//Rest & spread tupla
+const tupla = [123, 'thadeu', true];
+function tuplaParam1(a, b, c) {
+    console.log(`1) ${a} ${b} ${c}`);
+}
+tuplaParam1(...tupla);
+function tuplaParam2(...params) {
+    console.log(Array.isArray(params));
+    console.log(`1) ${params}`);
+}
+tuplaParam2(...tupla);
 //# sourceMappingURL=ecmascript.js.map

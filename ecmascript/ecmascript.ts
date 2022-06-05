@@ -100,3 +100,17 @@ console.log(turmaA);
 
 const retornarArray = (a:number, ...args: number[]): number[] => [a, ...args];
 console.log(retornarArray(10,1,2,3,4,5));
+
+//Rest & spread tupla
+const tupla: [number, string, boolean] = [123, 'thadeu', true];
+
+function tuplaParam1(a: number, b: string, c: boolean): void {
+    console.log(`1) ${a} ${b} ${c}`);
+}
+tuplaParam1(...tupla);
+
+function tuplaParam2(...params: [number,string,boolean]): void {
+    console.log(Array.isArray(params));
+    console.log(`1) ${params}`);
+}
+tuplaParam2(...tupla);
