@@ -119,25 +119,25 @@ console.log(boasVindas);
 console.log(`Boas vindas ${usuarioID} Notificações: ${notificacoes}`); // template string mode hehe
 console.log(`${1 + 1 + 2 + 60 * 50}`);
 //Callback
-function esperar3s(cb) {
-    setTimeout(() => {
-        cb("retorno callback");
-    }, 3000);
-}
-const readingCb = (param) => console.log("param =>", param);
-esperar3s(readingCb);
-function esperar3sPromise() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("3s depois........");
-        }, 4000);
-    });
-}
-esperar3sPromise().then(dado => console.log(dado));
-fetch('https://swapi.dev/api/people/1')
-    .then(resp => resp.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(respFilms => respFilms.json())
-    .then(respFilms => console.log(respFilms));
+// function esperar3s(cb: Function) {
+//     setTimeout(() => {
+//         cb("retorno callback");
+//     }, 3000)
+// }
+// const readingCb = (param: string) => console.log("param =>", param);
+// esperar3s(readingCb);
+// function esperar3sPromise(){
+//     return new Promise((resolve: any) => {
+//         setTimeout(() => {
+//             resolve("3s depois........")
+//         }, 4000);
+//     }) 
+// }
+// esperar3sPromise().then(dado => console.log(dado));
+// fetch('https://swapi.dev/api/people/1')
+//     .then(resp => resp.json())
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(respFilms => respFilms.json())
+//     .then(respFilms => console.log(respFilms))
 //# sourceMappingURL=ecmascript.js.map
