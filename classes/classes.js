@@ -41,4 +41,47 @@ const p1 = new Produto('geladeira', 1700.50, 0.1);
 const p2 = new Produto('Fogão', 1000);
 console.log(p1);
 console.log(p2);
+class Carro {
+    constructor(marca, modelo, velocidadeMaxima = 200) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.velocidadeAtual = 0;
+    }
+    alterarVelocidade(delta) {
+        const novaVelocidade = this.velocidadeAtual + delta;
+        const velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
+        if (velocidadeValida)
+            this.velocidadeAtual = novaVelocidade;
+        else if (this.velocidadeAtual > 0)
+            this.velocidadeAtual = this.velocidadeMaxima;
+        else if (this.velocidadeAtual < 0)
+            this.velocidadeAtual = 0;
+        return this.velocidadeAtual;
+    }
+    acelerar() {
+        return this.alterarVelocidade(5);
+    }
+    frear() {
+        return this.alterarVelocidade(-5);
+    }
+}
+const carro1 = new Carro('Ford', 'Ka', 185);
+Array(50).fill(0).forEach(() => carro1.acelerar());
+console.log(carro1.acelerar());
+Array(50).fill(0).forEach(() => carro1.frear());
+console.log(carro1.frear());
+// Atributos e métodos privados não são transmitidos por herança, precisamos trocar para protected 
+class Ferrari extends Carro {
+    acelerar() {
+        return this.alterarVelocidade(20);
+    }
+    frear() {
+        return this.alterarVelocidade(-15);
+    }
+}
+const f40 = new Ferrari('Ferrari', 'F40', 324);
+console.log(`${f40.marca} ${f40.modelo}`);
+console.log(f40.acelerar());
+console.log(f40.frear());
 //# sourceMappingURL=classes.js.map
