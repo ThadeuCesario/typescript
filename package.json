@@ -4,9 +4,12 @@
   "description": "Studies about Typescript - Cod3r",
   "main": "index.html",
   "dependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "systemjs": "^0.21.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.6.1"
+  },
   "scripts": {
     "start": "live-server",
     "watch": "tsc -w"
