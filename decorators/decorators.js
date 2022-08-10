@@ -89,6 +89,9 @@ class ContaCorrente {
     }
 }
 __decorate([
+    naoNegativo
+], ContaCorrente.prototype, "saldo", void 0);
+__decorate([
     congelar
 ], ContaCorrente.prototype, "sacar", null);
 __decorate([
@@ -96,15 +99,33 @@ __decorate([
 ], ContaCorrente.prototype, "getSaldo", null);
 const cc = new ContaCorrente(10248.57);
 cc.sacar(5000);
+cc.sacar(5248.47);
+cc.sacar(0.1);
 console.log(cc.getSaldo());
-cc.getSaldo = function () {
-    return this['saldo'] + 7000;
-};
+// cc.getSaldo = function() {
+//     return this['saldo'] + 7000;
+// }
 console.log(cc.getSaldo());
 // Object.freeze()
 function congelar(alvo, nomeMetodo, descriptor) {
     console.log(alvo);
     console.log(nomeMetodo);
     descriptor.writable = false;
+}
+function naoNegativo(alvo, nomePropriedade) {
+    delete alvo[nomePropriedade];
+    Object.defineProperty(alvo, nomePropriedade, {
+        get: function () {
+            return alvo["_" + nomePropriedade];
+        },
+        set: function (valor) {
+            if (valor < 0) {
+                throw new Error('Saldo inválido');
+            }
+            else {
+                alvo["_" + nomePropriedade] = valor;
+            }
+        }
+    });
 }
 //# sourceMappingURL=decorators.js.map

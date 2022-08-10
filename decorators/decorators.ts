@@ -85,6 +85,7 @@ function perfilAdmin<T extends Construtor>(construtor: T) {
 
 
 class ContaCorrente {
+    @naoNegativo
     private saldo: number;
     
     constructor(saldo: number) {
@@ -109,11 +110,13 @@ class ContaCorrente {
 
 const cc = new ContaCorrente(10248.57);
 cc.sacar(5000);
+cc.sacar(5248.47);
+cc.sacar(0.1);
 console.log(cc.getSaldo());
 
-cc.getSaldo = function() {
-    return this['saldo'] + 7000;
-}
+// cc.getSaldo = function() {
+//     return this['saldo'] + 7000;
+// }
 
 console.log(cc.getSaldo());
 
@@ -122,4 +125,21 @@ function congelar(alvo: any, nomeMetodo: string, descriptor: PropertyDescriptor)
     console.log(alvo);
     console.log(nomeMetodo);
     descriptor.writable = false;
+}
+
+function naoNegativo(alvo: any, nomePropriedade: string) {
+    delete alvo[nomePropriedade];
+    Object.defineProperty(alvo, nomePropriedade, {
+        get: function(): any {
+            return alvo["_" + nomePropriedade]
+        },
+        set: function(valor: any): void {
+            if (valor < 0) {
+                throw new Error('Saldo inválido');
+            }
+            else {
+                alvo["_" + nomePropriedade] = valor;
+            }
+        }
+    })
 }
